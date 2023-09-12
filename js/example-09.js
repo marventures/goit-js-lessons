@@ -11,3 +11,11 @@ const defaultValue = 10;
 const value = incomingValue || defaultValue;
 console.log(value);
 */
+
+// ?? nullish coalescing operator
+// works like || but only for null/undefined
+
+const incomingValue = undefined;
+const defaultValue = 10;
+const value = defaultValue ?? incomingValue;
+console.log(value);

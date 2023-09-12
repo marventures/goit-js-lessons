@@ -6,3 +6,8 @@ Disassemble operators priority in the variable value assignment instruction resu
 const result = 108 + 223 - 2 * 5;
 console.log(result); 
 */
+
+// PEMDAS
+// PARENTHESIS, EXPONENTS, MULTIPLY, DIVISION, ADD, SUBTRACT
+const result = 108 + (223 - 2) * 5;
+console.log(result);

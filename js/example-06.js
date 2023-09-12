@@ -19,3 +19,14 @@ const convertedHeight = ;
 const bmi = ;
 console.log(bmi); // 28.7
 */
+
+const weight = '88.75';
+const height = '1.75';
+
+const convertedWeight = parseFloat(weight);
+console.log(convertedWeight);
+const convertedHeight = parseFloat(height);
+console.log(convertedHeight);
+
+// const bmi = ;
+// console.log(bmi); // 28.7
