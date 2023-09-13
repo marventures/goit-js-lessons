@@ -1,33 +1,13 @@
 /* 
-Example 6 - String methods and chaining
+Example 6 - Link formatting (includes and logical "AND")
 
-Write a script that calculates a person's body mass index. For this you need to divide the weight in 
-kilograms by the square of the person's height in meters.
+Write a script that checks if the value of the link variable ends by symbol /. 
+If not, append this character to the end of the link value, but only if link contains the substring "my-site".
+Use construction if...else.
 
-Weight and height are stored in the weight and height variables, but not as numbers, 
-but in as strings(specially for the task).Non - integer numbers can be given as 24.7 or 24, 7, that is, 
-as a separator of the fractional part can be comma. 
+let link = 'https://somesite.com/about';
+// Write code below this line
 
-The body mass index should be rounded to one decimal place;
-
-const weight = '88,3';
-const height = '1.75';
-
-const convertedWeight = ;
-const convertedHeight = ;
-
-const bmi = ;
-console.log(bmi); // 28.7
+// Write code above this line
+console.log(link);
 */
-
-const weight = '88.75';
-const height = '1.75';
-
-const convertedWeight = parseFloat(weight);
-console.log(convertedWeight);
-const convertedHeight = parseFloat(height);
-console.log(convertedHeight);
-
-const bmi = convertedWeight / Math.pow(convertedHeight, 2);
-console.log(bmi); // 28.73469387755102
-console.log(bmi.toFixed(1)); // 28.7

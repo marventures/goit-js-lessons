@@ -1,14 +1,13 @@
 /* 
-Example 2 - Combined operators
+Example 2 - Time display (if...else)
 
-Replace the override expression with the combined operator +=.
+Write a script to display hours and minutes in the browser console as a string format "14 hours 26 minutes.". 
+If the value of the minutes variable is 0, then output the string "14 o'clock", without minutes.
 
-let students = 100;
-students = students + 50;
-console.log(students);
+const hours = 14;
+const minutes = 26;
+let timestring;
+// Write if else code below this line
+
+console.log(timestring);
 */
-
-let students = 150;
-// students = students + 50;
-students += 50;
-console.log(students);

@@ -1,32 +1,13 @@
 /* 
-Example 8 - Logical operators
-What will be the result of the expressions?
+Example 8 - if...else and logical operators
 
-// console.log(true && 3);
-// console.log(false && 3);
-// console.log(true && 4 && 'kiwi');
-// console.log(true && 0 && 'kiwi');
-// console.log(true || 3);
-// console.log(true || 3 || 4);
-// console.log(true || false || 7);
-// console.log(null || 2 || undefined);
-// console.log((1 && null && 2) > 0);
-// console.log(null || (2 && 3) || 4);
+Write a script that will output a string to the browser console depending on hours variable values.
+
+If the value of the variable hours:
+    - less than 17, output the string "Pending"
+    - greater than or equal to 17 and less than or equal to 24, output the string "Expires"
+    - greater than 24 , output the string "Overdue"
+
+const hours = 24;
+// Write if, else if, else code below this line
 */
-
-// logical && operator  -> stumbles on false and returns it, if both are true, it will return the last value
-// console.log(true && 3); // 3
-// console.log(false && 3); // false
-// console.log(true && 4 && 'kiwi'); // 'kiwi'
-// console.log(true && 0 && 'kiwi'); // 0
-
-// logical || operator -> returns the first true value
-// console.log(true || 3); //true
-// console.log(true || 3 || 4); // true
-// console.log(true || false || 7); // true
-
-// console.log(null || 2 || undefined); //2
-
-// console.log((1 && null && 2) > 0); //false// null > 0 //  type casting-> null becomes 0 // 0 > 0
-
-// console.log(null || (2 && 3) || 4); //3

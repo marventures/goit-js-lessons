@@ -1,21 +1,10 @@
 /* 
-Example 1 - Mathematical operators
+Example 1 - User Input and Branching
 
-Display the total number of apples and grapes on the screen. The difference between apples and grapes.
+Using the if..else and prompt constructs, write code that will ask: "What is the official name of JavaScript?". 
+If the user enters ECMAScript, then show an alert with the string "Correct!", otherwise - "Do not know? ECMAScript!"
 
-const apples = 47;
-const grapes = 135;
-const total = ;
-console.log(total)
-const diff = ;
-console.log(diff)
+const answer = prompt('What is the official name of JavaScript?');
+const rightAnswer = 'ECMAScript';
+// Write if else code below this line
 */
-
-const apples = 47;
-const grapes = 135;
-
-const total = apples + grapes;
-console.log(total);
-
-const diff = apples - grapes;
-console.log(diff);

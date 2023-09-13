@@ -1,31 +1,17 @@
 /* 
-Example 10 - The % Operator and String Methods
+Example 10 - Project submission deadline (switch)
 
-Write a script that will convert the value of totalMinutes (number of minutes) to string in hour and minute format HH:MM.
+Make the code refactor of the task number 9 code using switch.
 
-70 will show 01:10
-450 will show 07:30
-1441 will show 24:01
+const daysUntilDeadline = 5;
 
-const totalMinutes = 70;
-const hours = ;
-const minutes = ;
-console.log(hours);
-console.log(minutes);
-
-const doubleDigitHours = ;
-const doubleDigitMinutes = ;
-console.log(`${doubleDigitHours}:${doubleDigitMinutes}`); 
+if (daysUntilDeadline === 0) {
+  console.log('Today');
+} else if (daysUntilDeadline === 1) {
+  console.log('Tomorrow');
+} else if (daysUntilDeadline === 2) {
+  console.log('The day after tomorrow');
+} else {
+  console.log('Date in the future');
+}
 */
-
-const totalMinutes = 70;
-const hours = Math.floor(totalMinutes / 60);
-// modulo operator = remainder
-
-const minutes = totalMinutes % 60;
-console.log(hours);
-console.log(minutes);
-
-const doubleDigitHours = String(hours).padStart(2, 0);
-const doubleDigitMinutes = String(minutes).padStart(2, 0);
-console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);

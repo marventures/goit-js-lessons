@@ -1,18 +1,16 @@
 /* 
-Example 4 - Math class
+Example 4 - Nested branches
 
-Write a script that prints to the console rounded up/down, etc. values of variable value. 
-Use the methods Math.floor(), Math.ceil() and Math.round().Check what happens in the console for the values "27.3" and "27.9".
+Write a script that compares the numbers in variables a and b. 
+If both values greater than 100,then print the maximum of them to the console.
+Otherwise, the console should show the sum of the value b and the number 512.
 
-const value = 27.5; 
+const a = 120;
+const b = 180;
+
+if (a > 100 && b > 100) {
+    //print to the console the maximum value between a and b here
+} else {
+    //print to the console the sum of b and number 512 here
+}
 */
-
-const value = 27.9;
-// Math.floor -> just take the whole number/ round down always
-console.log(Math.floor(value));
-
-// Math.ceil-> just take the whole number/ round up always
-console.log(Math.ceil(value));
-
-// Math.round -> applies to mathematics rounding/ round off /// 1-4 round down // 5-9 round up
-console.log(Math.round(value));

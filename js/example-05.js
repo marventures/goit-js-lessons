@@ -1,17 +1,13 @@
 /* 
-Example 5 - Template lines
+Example 5 - Link Formatting (endsWith)
 
-Compose a phrase using the template strings A has B bots in stock, where A, B - variables inserted into a line.
+Write a script that checks if the value of the link variable ends symbol /. 
+if not, add this character to the end of the link value.Use if...else construction.
 
-const companyName = 'Cyberdyne Systems';
-const repairBots = 150;
-const defenceBots = 50;
-const message = ``;
-console.log(message); // "Cyberdyne Systems has 200 bots in stock"
+let link = 'https://my-site.com/about';
+// Write code below this line
+
+//Write code above this line
+console.log(link);
+
 */
-
-const companyName = 'Cyberdyne Systems';
-const repairBots = 150;
-const defenceBots = 50;
-const message = `${companyName} has ${repairBots + defenceBots} bots in stock`;
-console.log(message);

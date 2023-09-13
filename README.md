@@ -1,27 +1,25 @@
 # GoIT JavaScript Lessons Summary
 
-## Module 1 Lesson 1 (Variables and Types)
+## Module 1 Lesson 2 (Branches and Cycles)
 
-- JavaScript Fundamentals
-- Adding Script
-- Dev Tools
-- Syntax Basics
-- Variable and Types
-- User Input
-- Basic Operators
-- Numbers
-- Strings
-- Logical Operators
+- Branching
+- Ternary Operator
+- Switch Operator
+- Switch Statement
+- Scope
+- Loops
 
 ### JS Tasks:
 
-- Example 1 - Mathematical operators
-- Example 2 - Combined operators
-- Example 3 - Operators Priority
-- Example 4 - Math class
-- Example 5 - Template lines
-- Example 6 - String methods and chaining
-- Example 7 - Comparison operators and type casting
-- Example 8 - Logical operators
-- Example 9 - Default value and null merge operator
-- Example 10 - The % Operator and String Methods
+- Example 1 - User Input and Branching
+- Example 2 - Time display (if...else)
+- Example 3 - Branching
+- Example 4 - Nested branches
+- Example 5 - Link Formatting (endsWith)
+- Example 6 - Link formatting (includes and logical "AND")
+- Example 7 - Link formatting (ternary operator)
+- Example 8 - If...else and logical operators
+- Example 9 - Project submission deadline (if...else)
+- Example 10 - Project submission deadline (switch)
+- Example 11 - The for loop
+- Example 12 - User Input and BranchingUser Input and Branching
