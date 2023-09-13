@@ -22,4 +22,4 @@
 - Example 9 - Project submission deadline (if...else)
 - Example 10 - Project submission deadline (switch)
 - Example 11 - The for loop
-- Example 12 - User Input and BranchingUser Input and Branching
+- Example 12 - User Input and Branching
