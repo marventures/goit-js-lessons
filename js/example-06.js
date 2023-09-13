@@ -28,5 +28,6 @@ console.log(convertedWeight);
 const convertedHeight = parseFloat(height);
 console.log(convertedHeight);
 
-// const bmi = ;
-// console.log(bmi); // 28.7
+const bmi = convertedWeight / Math.pow(convertedHeight, 2);
+console.log(bmi); // 28.73469387755102
+console.log(bmi.toFixed(1)); // 28.7
