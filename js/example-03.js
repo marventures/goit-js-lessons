@@ -9,3 +9,18 @@ If a negative number is passed, in the console should be the string "This is a n
 const userInput = prompt('Enter the number');
 // Write if, else if , else code below this line
 */
+
+const userInput = prompt('Enter the number');
+// Write if, else if , else code below this line
+
+if (userInput === null) {
+  console.log('Your input field is empty');
+} else if (Number(userInput === 0)) {
+  console.log('This is zero');
+} else if (Number(userInput > 0)) {
+  console.log('This is a positive number!');
+} else if (Number(userInput < 0)) {
+  console.log('This is a negative number!');
+} else {
+  console.log('Please input a number!');
+}

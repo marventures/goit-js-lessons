@@ -11,3 +11,14 @@ If the value of the variable hours:
 const hours = 24;
 // Write if, else if, else code below this line
 */
+
+const hours = 16;
+// Write if, else if, else code below this line
+if (hours < 17) {
+  console.log('Pending');
+} else if (hours >= 17 && hours <= 24) {
+  //(24 <= hours >= 17  )
+  console.log('Expires');
+} else {
+  console.log('Overdue');
+}

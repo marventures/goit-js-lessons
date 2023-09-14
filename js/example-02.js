@@ -11,3 +11,18 @@ let timestring;
 
 console.log(timestring);
 */
+
+const hours = 14;
+const minutes = 0;
+let timestring;
+// Write if else code below this line
+
+console.log(timestring);
+
+if (minutes > 0) {
+  timestring = `${hours} hours ${minutes} minutes.`;
+} else {
+  timestring = `${hours} o'clock`;
+}
+
+console.log(timestring);

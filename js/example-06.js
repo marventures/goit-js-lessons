@@ -11,3 +11,11 @@ let link = 'https://somesite.com/about';
 // Write code above this line
 console.log(link);
 */
+
+let link = 'https://my-site.com/about';
+// Write code below this line
+if (!link.endsWith('/') && link.includes('my-site')) {
+  link += '/';
+}
+// Write code above this line
+console.log(link);

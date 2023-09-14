@@ -14,3 +14,24 @@ if (a > 100 && b > 100) {
     //print to the console the sum of b and number 512 here
 }
 */
+
+const a = 20;
+const b = 180;
+
+/* if (a > 100 && b > 100) {
+  //print to the console the maximum value between a and b here
+  console.log(Math.max(a, b));
+} else {
+  console.log(b + 512);
+} */
+
+if (a > 100 && b > 100) {
+  //print to the console the maximum value between a and b here
+  if (a > b) {
+    console.log(a);
+  } else {
+    console.log(b);
+  }
+} else {
+  console.log(b + 512);
+}

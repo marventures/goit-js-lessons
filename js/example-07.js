@@ -9,3 +9,9 @@ if (!link.endsWith('/') && link.includes('my-site')) {
 }
 console.log(link);
 */
+
+let link = 'https://my-site.com/about';
+
+// condition ? true value : false value
+!link.endsWith('/') && link.includes('my-site') ? (link += '/') : null;
+console.log(link);

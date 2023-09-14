@@ -12,3 +12,15 @@ Use if...else construction.
 const daysUntilDeadline = 5;
 // Write code below this line
  */
+
+const daysUntilDeadline = 4;
+// Write code below this line
+if (daysUntilDeadline === 0) {
+  console.log('Today');
+} else if (daysUntilDeadline === 1) {
+  console.log('Tomorrow');
+} else if (daysUntilDeadline === 2) {
+  console.log('The day after tomorrow');
+} else {
+  console.log('Date in the future!');
+}

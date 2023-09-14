@@ -8,3 +8,14 @@ const answer = prompt('What is the official name of JavaScript?');
 const rightAnswer = 'ECMAScript';
 // Write if else code below this line
 */
+
+/* const answer = prompt('What is the official name of JavaScript?');
+const rightAnswer = 'ECMAScript';
+// Write if else code below this line
+
+if (answer.toLowerCase() === rightAnswer.toLowerCase()) {
+  console.log('Correct!');
+} else {
+  console.log('Do not know? ECMAScript!');
+}
+*/
