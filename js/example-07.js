@@ -1,17 +1,7 @@
 /*
-Example 7 - Link formatting (ternary operator)
+Example 7 - Sorting an array with a loop
 
-Make code refactoring of the task number 6 code using ternary operator.
+Write a script to sort an array of strings alphabetically by the first letter of an element.
 
-let link = 'https://somesite.com/about';
-if (!link.endsWith('/') && link.includes('my-site')) {
-  link += '/';
-}
-console.log(link);
+const langs = ['python', 'javascript', 'c++', 'haskel', 'php', 'ruby'];
 */
-
-let link = 'https://my-site.com/about';
-
-// condition ? true value : false value
-!link.endsWith('/') && link.includes('my-site') ? (link += '/') : null;
-console.log(link);

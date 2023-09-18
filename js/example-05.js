@@ -1,22 +1,8 @@
 /* 
-Example 5 - Link Formatting (endsWith)
+Example 5 - Arrays and Strings
 
-Write a script that checks if the value of the link variable ends symbol /. 
-if not, add this character to the end of the link value.
-Use if...else construction.
+Write a script that prints to the console all the words of a string except the first and the last one.
+The resulting string must not start or end whitespace character.The script should work for any line.
 
-let link = 'https://my-site.com/about';
-// Write code below this line
-
-//Write code above this line
-console.log(link);
-
+const string = 'Welcome to the future';
 */
-
-let link = 'https://my-site.com/about';
-// Write code below this line
-if (!link.endsWith('/')) {
-  link += '/';
-}
-//Write code above this line
-console.log(link);

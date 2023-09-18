@@ -1,28 +1,9 @@
 /* 
-Example 2 - Time display (if...else)
+Example 2 - Arrays and Strings
 
-Write a script to display hours and minutes in the browser console as a string format "14 hours 26 minutes.". 
-If the value of the minutes variable is 0, then output the string "14 o'clock", without minutes.
+- Write a script to calculate the area of a rectangle with sides, whichvalues values are stored in the values variable as a string. 
+- Values guaranteed separated by a space.
 
-const hours = 14;
-const minutes = 26;
-let timestring;
-// Write if else code below this line
+const values = '8 11';
 
-console.log(timestring);
 */
-
-const hours = 14;
-const minutes = 0;
-let timestring;
-// Write if else code below this line
-
-console.log(timestring);
-
-if (minutes > 0) {
-  timestring = `${hours} hours ${minutes} minutes.`;
-} else {
-  timestring = `${hours} o'clock`;
-}
-
-console.log(timestring);
