@@ -7,3 +7,18 @@ Example 2 - Arrays and Strings
 const values = '8 11';
 
 */
+
+const values = '8 11';
+const arr = values.split(' ');
+console.log(arr);
+
+// first value
+const firstValue = arr[0];
+console.log(firstValue);
+
+// last value
+const lastValue = arr[arr.length - 1];
+console.log(lastValue);
+
+const total = firstValue * lastValue;
+console.log(total);

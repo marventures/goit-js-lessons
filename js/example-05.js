@@ -6,3 +6,25 @@ The resulting string must not start or end whitespace character.The script shoul
 
 const string = 'Welcome to the future';
 */
+
+// const string = 'Welcome to the future';
+// const words = string.split(' ');
+// console.log(words);
+
+// // removes first el
+// words.shift();
+// console.log(words);
+
+// // removes last el
+// words.pop();
+// console.log(words);
+
+// // join string
+// const newStr = words.join(' ');
+// console.log(newStr);
+
+const string = 'Welcome to the future';
+const words = string.split(' ');
+console.log(words);
+
+console.log(words.slice(1, 3).join(' '));
