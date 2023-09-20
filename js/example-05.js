@@ -1,30 +1,24 @@
 /* 
-Example 5 - Arrays and Strings
+Example 5 - Contact logging (Function Declaration and Rest Operator)
 
-Write a script that prints to the console all the words of a string except the first and the last one.
-The resulting string must not start or end whitespace character.The script should work for any line.
+Write a function printContactsInfo(names, phones) using Function Declaration that prints to the console the name and the user's phone number. 
 
-const string = 'Welcome to the future';
+The names and phones parameters will be passed strings of names and phone numbers separated by commas. 
+
+Sequence number of names and phone numbers in the rows indicate a match. Number of names and phones guaranteed to be the same.
+
+Print a message to the console in the format Name:<names>; Phone:<phones>;  Age<age>
+
 */
 
-// const string = 'Welcome to the future';
-// const words = string.split(' ');
-// console.log(words);
+// rest operator (pack)-> Used in function parameter lists; collects the remaining arguments into a single array parameter
 
-// // removes first el
-// words.shift();
-// console.log(words);
+function printContactsInfo(...rest) {
+  // write code below this line
+}
 
-// // removes last el
-// words.pop();
-// console.log(words);
-
-// // join string
-// const newStr = words.join(' ');
-// console.log(newStr);
-
-const string = 'Welcome to the future';
-const words = string.split(' ');
-console.log(words);
-
-console.log(words.slice(1, 3).join(' '));
+printContactsInfo(
+  'Jacob,William,Solomon,Artemis',
+  '89001234567,89001112233,890055566377,890055566300',
+  '28,21,18,31'
+);

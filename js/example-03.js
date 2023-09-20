@@ -1,15 +1,12 @@
 /* 
-Example 3 - Array iteration
+Example 3 - Area of a rectangle (Function Declaration)
 
-Write a script to iterate over the fruits array with a for loop.
-For each array element print a string in the format element_number: element_value to the console.
-Element numbering must start from 1.
-
-const fruits = ['🍎', '🍇', '🍑', '🍌', '🍋'];
+Write a function getRectArea(dimensions) using Function Declaration to calculate the area of a rectangle with sides, the values of which will be passed to the dimensions parameter as a string. Values are guaranteed to be separated by a space.
 
 */
-const fruits = ['🍎', '🍇', '🍑', '🍌', '🍋'];
 
-for (let i = 0; i < fruits.length; i += 1) {
-  console.log(`${i + 1}: ${fruits[i]}`);
+function getRectArea(dimensions) {
+  // write code below this line
 }
+
+console.log(getRectArea('8 11'));

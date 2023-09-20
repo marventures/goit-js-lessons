@@ -1,22 +1,14 @@
 /* 
-Example 6 - Arrays and Strings
-
-Write a script that "unwraps" a string (reverse letter order) and prints it to the console.
-
-const string = 'Welcome to the future';
+Example 6 - Finding the largest element (Function Declaration and Spread Operator)
+Write a function findLargestNumber(numbers) using Function Declaration that looks for the largest number in array.
 
 */
-const string = 'Welcome to the future';
 
-const arr = string.split('');
-console.log(arr);
+// spread operator (unpack) -> used in function calls, array literals, and object literals.
 
-const reverse = arr.reverse();
-console.log(reverse);
+function findLargestNumber(numbers) {
+  // write code below this line
+}
 
-const result = reverse.join('');
-console.log(result);
-
-// second way -> method chaining
-const result2 = string.split('').reverse().join('');
-console.log(result2);
+console.log(findLargestNumber([2, 17, 94, 1, 23, 37])); // 94
+console.log(findLargestNumber([49, 4, 7, 83, 12])); // 83

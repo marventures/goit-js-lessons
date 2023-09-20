@@ -1,32 +1,13 @@
 /* 
-Example 8 - Search for an element
-    
-Write a script to find the smallest number in an array. The code should work for any array of numbers. Use a loop to solve problems.
+Example 8 - Time Formatting (Function Declaration)
+Write a function formatTime(minutes) using Function Declaration that will translate the value of minutes (number of minutes) to a string in hour and minute format HH:MM.
 
-const numbers = [2, 17, 94, 1, 23, 37];
-let min;
-console.log(min); // 1
 */
 
-const numbers = [1, 2, 3, 4, 5];
-let min = numbers[0]; //assume the first element as the initial minimum
-/* 
-for (let i = 1; i < numbers.length; i += 1) {
-  if (numbers[i] < min) {
-    min = numbers[i];
-  }
-} */
-
-for (const number of numbers) {
-  if (number < min) {
-    min = number;
-  }
+function formatTime(minutes) {
+  // write code below this line
 }
 
-console.log(min);
-
-const names = ['Jed', 'Jesus', 'Christine', 'Dons'];
-
-for (const name of names) {
-  console.log(name);
-}
+console.log(formatTime(70)); // "01:10"
+console.log(formatTime(450)); // "07:30"
+console.log(formatTime(1441)); // "24:01"

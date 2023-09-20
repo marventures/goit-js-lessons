@@ -1,39 +1,17 @@
 /* 
-Example 1 - Basic operations with an array
+Example 1 - Body mass index (Function Declaration)
 
-1. Create an array genres with elements "Jazz" and "Blues".
-2. Add "Rock and Roll" to the end.
-3. Print the first element of the array to the console.
-4. Print the last element of the array to the console. The code should work for an array random length.
-5. Remove the first element and print it to the console.
-6. Insert "Country" and "Reggae" at the beginning of the array.
+Write a function calcBMI(weight, height) using Function Declaration that calculates and returns the body mass index of a person. To do this, divide the weight in kilograms by square of a person's height in meters.
 
-const genres = ;
+The weight and height will be specially passed as strings. Non-integer numbers can be specified as 24.7 or 24.7, i.e. a comma can be used as a decimal separator.
+
+Body mass index must be rounded to one decimal place;
 
 */
 
-// 1.
-const genres = ['Jazz', 'Blues'];
-// console.log(genres);
+function calcBMI(weight, height) {
+  // write code below this line
+}
 
-// //2.
-// genres.push('Rock and Roll');
-// console.log(genres);
-
-// //3.
-// // console.log(genres[0]);
-// const firstEl = genres[0];
-// console.log(firstEl);
-
-// // 4.
-// const lastEl = genres[genres.length - 1];
-// console.log(lastEl);
-
-// //5.
-// const deleteFirstEl = genres.shift();
-// console.log(deleteFirstEl);
-// console.log(genres);
-
-//6.
-const addFirstEl = genres.unshift('Country', 'Regae');
-console.log(genres);
+const bmi = calcBMI('88,3', '1.75');
+console.log(bmi); // 28.8

@@ -1,24 +1,13 @@
 /* 
-Example 2 - Arrays and Strings
-
-- Write a script to calculate the area of a rectangle with sides, whichvalues values are stored in the values variable as a string. 
-- Values guaranteed separated by a space.
-
-const values = '8 11';
+Example 2 - Smaller of numbers (Function Expression)
+Write a function min(a,b) using Function Expression that returns the smaller of the numbers a and b.
 
 */
 
-const values = '8 11';
-const arr = values.split(' ');
-console.log(arr);
+const min = function (a, b) {
+  // write code below this line
+};
 
-// first value
-const firstValue = arr[0];
-console.log(firstValue);
-
-// last value
-const lastValue = arr[arr.length - 1];
-console.log(lastValue);
-
-const total = firstValue * lastValue;
-console.log(total);
+console.log(min(2, 5)); // 2
+console.log(min(3, -1)); // -1
+console.log(min(1, 1)); // 1

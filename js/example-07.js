@@ -1,39 +1,14 @@
 /*
-Eximple 7 - Sorting an array with a loop
+Example 7 - Average value (Function Declaration and Rest Operator)
 
-Write a script to sort an array of strings alphabetically by the first letter of an element.
+Write a calAverage() function using Function Declaration that takes an arbitrary number of arguments and returns their average. All arguments will be only numbers.
 
-const langs = ['python', 'javascript', 'c++', 'haskel', 'php', 'ruby'];
 */
 
-const langs = ['python', 'javascript', 'c++', 'haskel', 'php', 'ruby'];
-/* 
-for (let i = 0; i < langs.length - 1; i += 1) {
-  for (let j = i + 1; j < langs.length; j += 1) {
-    const firstLetterI = langs[i][0];
-    const firstLetterJ = langs[j][0];
-
-    if (firstLetterI > firstLetterJ) {
-      const temp = langs[i];
-      langs[i] = langs[j];
-      langs[j] = temp;
-    }
-  }
+function calAverage(...args) {
+  // write code below this line
 }
 
-console.log(langs); */
-
-langs.sort((i, j) => {
-  const firstLetterI = i.charAt(0);
-  const firstLetterJ = j.charAt(0);
-
-  if (firstLetterI < firstLetterJ) {
-    return -1;
-  } else if (firstLetterI > firstLetterJ) {
-    return 1;
-  } else {
-    return 0;
-  }
-});
-
-console.log(langs);
+console.log(calAverage(1, 2, 3, 4)); // 2.5
+console.log(calAverage(14, 8, 2)); // 8
+console.log(calAverage(27, 43, 2, 8, 36)); // 23.2
