@@ -16,25 +16,39 @@ console.log(courses);
 
 function addCourse(newCourse) {
   // write code below this line
+  courses.push(newCourse);
 }
 
 // call addCourse
+addCourse('MySQl');
+console.log(courses);
 
 //////////////////////////////////////////////////////////////////////////
 
 // 2. removeCourse(name) {}
 function removeCourse(name) {
   // write code below this line
+  const courseIndex = courses.indexOf(name);
+
+  courses.splice(courseIndex, 1);
 }
 
 // call removeCourse
+removeCourse('JavaScript');
+console.log(courses);
 
 //////////////////////////////////////////////////////////////////////////
 
 // 3. updateCourse(oldName, newName) {}
 
-function updateCourse(oldName, newName) {
-  // write code below this line
-}
+// function updateCourse(oldName, newName) {
+//   // write code below this line
+//   const courseIndex = courses.indexOf(oldName);
 
-// call updateCourse
+//   courses[courseIndex] = newName;
+// }
+
+// // call updateCourse
+
+// updateCourse('MySQL', 'JavaScript');
+// console.log(courses);

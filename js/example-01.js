@@ -9,8 +9,13 @@ Body mass index must be rounded to one decimal place;
 
 */
 
+// weight/height^2
+
 function calcBMI(weight, height) {
   // write code below this line
+  const parsedWeight = weight.replace(',', '.');
+
+  return (parsedWeight / height ** 2).toFixed(1);
 }
 
 const bmi = calcBMI('88,3', '1.75');

@@ -15,6 +15,15 @@ Print a message to the console in the format Name:<names>; Phone:<phones>;  Age<
 
 function printContactsInfo(...rest) {
   // write code below this line
+  const namesArr = rest[0].split(','); // ['Jacob', 'William', 'Solomon', 'Artemis']
+  const phonesArr = rest[1].split(','); //   ['89001234567', '89001112233', '890055566377', '890055566300']
+  const ageArr = rest[2].split(','); //  ['28', '21', '18', '31']
+
+  for (let i = 0; i < namesArr.length; i++) {
+    console.log(
+      `Name:${namesArr[i]}; Phone:${phonesArr[i]};  Age:${ageArr[i]}`
+    );
+  }
 }
 
 printContactsInfo(

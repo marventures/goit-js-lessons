@@ -6,6 +6,15 @@ Write a function min(a,b) using Function Expression that returns the smaller of 
 
 const min = function (a, b) {
   // write code below this line
+  /*   if (a < b) {
+    return a;
+  } else {
+    return b;
+  } */
+
+  /*   return a < b ? a : b; */
+
+  return Math.min(a, b);
 };
 
 console.log(min(2, 5)); // 2

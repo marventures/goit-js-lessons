@@ -8,6 +8,7 @@ Write a function findLargestNumber(numbers) using Function Declaration that look
 
 function findLargestNumber(numbers) {
   // write code below this line
+  return Math.max(...numbers);
 }
 
 console.log(findLargestNumber([2, 17, 94, 1, 23, 37])); // 94
