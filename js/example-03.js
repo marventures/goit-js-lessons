@@ -1,17 +1,27 @@
 /* 
-Example 3 - Area of a rectangle (Function Declaration)
+Example 3 - Array of objects
 
-Write a function getRectArea(dimensions) using Function Declaration to calculate the area of a rectangle with sides, the values of which will be passed to the dimensions parameter as a string. Values are guaranteed to be separated by a space.
+Write a function calcTotalPrice(stones, stoneName) that takes an array of objects and a string with the name of the stone. 
+
+The function calculates and returns the total cost of stones (price * quantity) if the stoneName matches the name in the array of objects called stones[{}].
 
 */
 
-// l * w
+const stones = [
+  { name: 'Emerald', price: 1300, quantity: 4 },
+  { name: 'Diamond', price: 2700, quantity: 3 },
+  { name: 'Sapphire', price: 400, quantity: 7 },
+  { name: 'Rubble', price: 200, quantity: 2 },
+];
 
-function getRectArea(dimensions) {
+const calcTotalPrice = function (stones, stoneName) {
+  let result;
   // write code below this line
-  const data = dimensions.split(' '); // ['8', '11']
 
-  return data[0] * data[1];
-}
+  // write above below this line
+  return result;
+};
 
-console.log(getRectArea('8 11'));
+let total = calcTotalPrice(stones, 'Diamond');
+let total2 = calcTotalPrice(stones, 'Sapphire');
+console.log(total, total2);

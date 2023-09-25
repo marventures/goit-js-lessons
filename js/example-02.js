@@ -1,22 +1,16 @@
 /* 
-Example 2 - Smaller of numbers (Function Expression)
-Write a function min(a,b) using Function Expression that returns the smaller of the numbers a and b.
+Example 2 - Object.values() method
+
+We have an object that stores our team salaries. 
+Write code for summing all salaries and store the result in the sum variable. 
+Should get 390.
 
 */
 
-const min = function (a, b) {
-  // write code below this line
-  /*   if (a < b) {
-    return a;
-  } else {
-    return b;
-  } */
-
-  /*   return a < b ? a : b; */
-
-  return Math.min(a, b);
+const salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130,
 };
 
-console.log(min(2, 5)); // 2
-console.log(min(3, -1)); // -1
-console.log(min(1, 1)); // 1
+// write code below this line
