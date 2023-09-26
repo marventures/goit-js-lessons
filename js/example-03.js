@@ -17,6 +17,11 @@ const stones = [
 const calcTotalPrice = function (stones, stoneName) {
   let result;
   // write code below this line
+  for (const stone of stones) {
+    if (stoneName === stone.name) {
+      result = stone.price * stone.quantity;
+    }
+  }
 
   // write above below this line
   return result;

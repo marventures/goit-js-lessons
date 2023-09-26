@@ -50,8 +50,13 @@ const account = {
   deposit(amount) {
     // write code below this line
     // a.
+    const transaction = this.createTransaction(amount, Transaction.DEPOSIT);
+
     // b.
+    this.transactions.push(transaction);
+
     // c.
+    this.balance += amount;
     // write above this line
   },
 
@@ -64,10 +69,24 @@ const account = {
   withdraw(amount) {
     // write code below this line
     // a.
+    const transaction = this.createTransaction(amount, Transaction.WITHDRAW);
+
     // b.
+    this.transactions.push(transaction);
+
     // c.
     // write above this line
+    this.balance -= amount;
   },
 };
 
 // call deposit and withdraw methods here to check
+console.log(account);
+account.deposit(1000);
+console.log(account);
+
+account.deposit(10000);
+console.log(account);
+
+account.withdraw(2000);
+console.log(account);

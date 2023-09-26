@@ -14,3 +14,12 @@ const salaries = {
 };
 
 // write code below this line
+const valuesArr = Object.values(salaries);
+console.log(valuesArr);
+
+let sum = 0;
+for (const value of valuesArr) {
+  sum += value;
+}
+
+console.log(sum);
