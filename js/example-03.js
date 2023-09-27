@@ -1,32 +1,36 @@
 /* 
-Example 3 - Array of objects
+Example 3 - Destructuring
 
-Write a function calcTotalPrice(stones, stoneName) that takes an array of objects and a string with the name of the stone. 
-
-The function calculates and returns the total cost of stones (price * quantity) if the stoneName matches the name in the array of objects called stones[{}].
-
+Rewrite the function so that it accepts a parameters object with properties companyName and stock and display a report about the number of goods in the warehouse of any companies.
 */
 
-const stones = [
-  { name: 'Emerald', price: 1300, quantity: 4 },
-  { name: 'Diamond', price: 2700, quantity: 3 },
-  { name: 'Sapphire', price: 400, quantity: 7 },
-  { name: 'Rubble', price: 200, quantity: 2 },
-];
-
-const calcTotalPrice = function (stones, stoneName) {
-  let result;
-  // write code below this line
-  for (const stone of stones) {
-    if (stoneName === stone.name) {
-      result = stone.price * stone.quantity;
-    }
+// write code below this line
+function getStockReport(companyName, stock) {
+  // write code above this line
+  let total = 0;
+  for (const value of Object.values(stock)) {
+    total += value;
   }
+  return `${companyName} has ${total} items in stock`;
+}
 
-  // write above below this line
-  return result;
-};
+console.log(
+  getStockReport({
+    companyName: 'Cyberdyne Systems',
+    stock: {
+      repairBots: 150,
+      defenceBots: 50,
+    },
+  })
+); // "Cyberdyne Systems has 200 items in stock"
 
-let total = calcTotalPrice(stones, 'Diamond');
-let total2 = calcTotalPrice(stones, 'Sapphire');
-console.log(total, total2);
+console.log(
+  getStockReport({
+    companyName: 'Belacci',
+    stock: {
+      shoes: 20,
+      skirts: 10,
+      hats: 5,
+    },
+  })
+); // "Belacci has 35 item in stock"

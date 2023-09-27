@@ -1,25 +1,26 @@
 /* 
-Example 2 - Object.values() method
-
-We have an object that stores our team salaries. 
-Write code for summing all salaries and store the result in the sum variable. 
-Should get 390.
-
+Example 2 - Destructuring
+Rewrite the function so that it takes one object of the parameter instead of a set of independent arguments.
 */
 
-const salaries = {
-  John: 100,
-  Ann: 160,
-  Pete: 130,
-};
-
 // write code below this line
-const valuesArr = Object.values(salaries);
-console.log(valuesArr);
-
-let sum = 0;
-for (const value of valuesArr) {
-  sum += value;
+function printContactsInfo(names, phones) {
+  // write code above this line
+  const nameList = names.split(',');
+  const phoneList = phones.split(',');
+  for (let i = 0; i < nameList.length; i += 1) {
+    console.log(`${nameList[i]}: ${phoneList[i]}`);
+  }
 }
 
-console.log(sum);
+// It was
+// printContactsInfo(
+//   'Jacob,William,Solomon,Artemis',
+//   '89001234567,89001112233,890055566377,890055566300',
+// );
+
+// Is expected
+printContactsInfo({
+  names: 'Jacob,William,Solomon,Artemis',
+  phones: '89001234567,89001112233,890055566377,890055566300',
+});
