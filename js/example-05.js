@@ -8,7 +8,7 @@ function createContact(partialContact) {
   return {
     list: 'default',
     // write code below this line
-
+    ...partialContact,
     // write code above this line
     id: Math.random(),
     createdAt: Date.now(),
@@ -26,5 +26,6 @@ console.log(
   createContact({
     name: 'Poly',
     email: 'poly@hotmail.com',
+    list: 'any',
   })
 );

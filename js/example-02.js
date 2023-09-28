@@ -4,7 +4,7 @@ Rewrite the function so that it takes one object of the parameter instead of a s
 */
 
 // write code below this line
-function printContactsInfo(names, phones) {
+function printContactsInfo({ names, phones }) {
   // write code above this line
   const nameList = names.split(',');
   const phoneList = phones.split(',');
@@ -16,7 +16,7 @@ function printContactsInfo(names, phones) {
 // It was
 // printContactsInfo(
 //   'Jacob,William,Solomon,Artemis',
-//   '89001234567,89001112233,890055566377,890055566300',
+//   '89001234567,89001112233,890055566377,890055566300'
 // );
 
 // Is expected

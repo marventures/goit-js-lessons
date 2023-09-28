@@ -5,7 +5,7 @@ Rewrite the function so that it accepts a parameters object with properties comp
 */
 
 // write code below this line
-function getStockReport(companyName, stock) {
+function getStockReport({ companyName, stock }) {
   // write code above this line
   let total = 0;
   for (const value of Object.values(stock)) {

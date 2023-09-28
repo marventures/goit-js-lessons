@@ -5,7 +5,7 @@ Rewrite the function so that it takes one object of the parameter instead of a s
 */
 
 // write code below this line
-function calcBMI(weight, height) {
+function calcBMI({ weight, height }) {
   // write code above this line
   const numericWeight = Number(weight.replace(',', '.'));
   const numericHeight = Number(height.replace(',', '.'));

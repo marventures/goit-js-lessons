@@ -5,8 +5,8 @@ Rewrite the property so that it uses one object's parameter instead of a set of 
 */
 
 // write code below this line
-function getBotReport(companyName, repairBots, defenceBots) {
-  return `${companyName} has ${repairBots + defenceBots} bots in stock`;
+function getBotReport({ companyName, bots: { repair, defence } }) {
+  return `${companyName} has ${repair + defence} bots in stock`;
   // write code above this line
 }
 

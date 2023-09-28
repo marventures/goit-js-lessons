@@ -5,10 +5,12 @@ Write a transformUsername(user) function to return a new object with fullName pr
 */
 
 // write code below this line
-function transformUsername({ firstName, lastName }) {
+// rest operator
+function transformUsername({ firstName, lastName, ...others }) {
   return {
     fullName: `${firstName} ${lastName}`,
     // write code above this line
+    ...others, // spread operator
   };
 }
 
