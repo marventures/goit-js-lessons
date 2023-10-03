@@ -1,17 +1,20 @@
 # GoIT JavaScript Lessons Summary
 
-## Module 3 Lesson 6 (Destructuring and spread/rest operator)
+## Module 4 Lesson 7 (Callbacks | Arrow functions | forEach)
 
-- Spread and Rest Syntax
-- Object Destructuring
-- Array Destructuring
-- Parameter Object Pattern
+- Callbacks
+- forEach Method
+- Arrow Functions
+- Code Types
 
 ### JS Tasks:
 
-- Example 1 - Destructuring
-- Example 2 - Destructuring
-- Example 3 - Destructuring
-- Example 4 - Deep destructuring
-- Example 5 - Spread Operator
-- Example 6 - Rest Operator
+- Example 1 - Function callback
+- Example 2 - Function callback
+- Example 3 - Function callback
+- Example 4 - Arrow functions
+- Example 5 - Arrow functions
+- Example 6 - Inline Arrow Functions
+- Example 7 - forEach Method
+- Example 8 - forEach Method
+- Example 9 - forEach Method
