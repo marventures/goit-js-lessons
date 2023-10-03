@@ -31,18 +31,26 @@ const account = {
   },
 };
 
-function handleSuccess(message) {
-  console.log(`✅ Success! ${message}`);
-}
+// function handleSuccess(message) {
+//   console.log(`✅ Success! ${message}`);
+// }
 
-function handleError(message) {
+const handleSuccess = message => {
+  console.log(`✅ Success! ${message}`);
+};
+
+// function handleError(message) {
+//   console.log(`❌ Error! ${message}`);
+// }
+
+const handleError = message => {
   console.log(`❌ Error! ${message}`);
-}
+};
 
 account.withdraw(2000, handleSuccess, handleError);
-account.withdraw(600, handleSuccess, handleError);
-account.withdraw(300, handleSuccess, handleError);
-account.deposit(1700, handleSuccess, handleError);
-account.deposit(0, handleSuccess, handleError);
-account.deposit(-600, handleSuccess, handleError);
-account.deposit(600, handleSuccess, handleError);
+// account.withdraw(600, handleSuccess, handleError);
+// account.withdraw(300, handleSuccess, handleError);
+// account.deposit(1700, handleSuccess, handleError);
+// account.deposit(0, handleSuccess, handleError);
+// account.deposit(-600, handleSuccess, handleError);
+// account.deposit(600, handleSuccess, handleError);

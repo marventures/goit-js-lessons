@@ -4,11 +4,21 @@ Make the code refactoring using forEach method and arrow functions.
 
 */
 
+// function calсulateAverage(...args) {
+//   let total = 0;
+//   for (let i = 0; i < args.length; i++) {
+//     total += args[i];
+//   }
+//   return total / args.length;
+// }
+
 function calсulateAverage(...args) {
   let total = 0;
-  for (let i = 0; i < args.length; i++) {
-    total += args[i];
-  }
+  // for (let i = 0; i < args.length; i++) {
+  //   total += args[i];
+  // }
+
+  args.forEach(el => (total += el));
   return total / args.length;
 }
 

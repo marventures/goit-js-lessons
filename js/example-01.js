@@ -9,11 +9,13 @@ Write the following functions:
 */
 
 // Solution
+// higher order function
 function createProduct(partialProduct, callback) {
   const product = { id: Date.now(), ...partialProduct };
   callback(product);
 }
 
+// callback function
 function logProduct(product) {
   console.log(product);
 }
@@ -28,4 +30,4 @@ function logTotalPrice(product) {
 createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct);
 
 // we call createProduct function here together with the callback fn(logTotalPrice)
-// createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
+createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);

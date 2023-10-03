@@ -37,6 +37,7 @@ const account = {
 function handleSuccess(message) {
   console.log(`✅ Success! ${message}`);
 }
+
 function handleError(message) {
   console.log(`❌ Error! ${message}`);
 }
@@ -45,9 +46,9 @@ function handleError(message) {
 
 // we call account.withdraw() here together with the callback function (handleSuccess) and (handleError)
 account.withdraw(2000, handleSuccess, handleError);
-account.withdraw(600, handleSuccess, handleError);
-account.withdraw(300, handleSuccess, handleError);
-account.deposit(1700, handleSuccess, handleError);
-account.deposit(0, handleSuccess, handleError);
-account.deposit(-600, handleSuccess, handleError);
-account.deposit(600, handleSuccess, handleError);
+// account.withdraw(600, handleSuccess, handleError);
+// account.withdraw(300, handleSuccess, handleError);
+// account.deposit(1700, handleSuccess, handleError);
+// account.deposit(0, handleSuccess, handleError);
+// account.deposit(-600, handleSuccess, handleError);
+// account.deposit(600, handleSuccess, handleError);

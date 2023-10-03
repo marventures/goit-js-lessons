@@ -5,6 +5,8 @@ Example 3 - Function callback
 */
 
 // Solution
+
+// HOF
 function each(array, callback) {
   const newArr = [];
   for (const el of array) {
