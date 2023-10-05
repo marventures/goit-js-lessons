@@ -19,7 +19,10 @@ const cars = [
 ];
 
 // write code below this line
-const getModels = cars => {};
+const getModels = cars => cars.map(car => car.model);
+// const getModels = cars => cars.map(car => car.price);
 // write code above this line
 
-console.table(getModels(cars));
+// console.table(getModels(cars));
+console.log(getModels(cars));
+console.log(cars);

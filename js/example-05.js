@@ -19,7 +19,8 @@ const cars = [
 ];
 
 // write code below this line
-const getCarsWithType = (cars, type) => {};
+const getCarsWithType = (cars, type) => cars.filter(car => car.type === type);
+// const getCarsWithType = (cars, type) => cars.filter(car => car.type.includes(type));
 // write code above this line
 
 console.table(getCarsWithType(cars, 'suv'));

@@ -17,7 +17,7 @@ const cars = [
 ];
 
 // write code below this line
-const getCarsWithDiscount = cars => {};
+const getCarsWithDiscount = cars => cars.filter(car => car.onSale);
 // write code above this line
 
 console.table(getCarsWithDiscount(cars));

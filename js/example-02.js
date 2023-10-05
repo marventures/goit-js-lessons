@@ -18,7 +18,11 @@ const cars = [
 ];
 
 // write code above this line
-const makeCarsWithDiscount = {};
+const makeCarsWithDiscount = (cars, discount) =>
+  cars.map(car => ({
+    ...car,
+    price: car.price - car.price * discount,
+  }));
 // write code below this line
 
 console.table(makeCarsWithDiscount(cars, 0.2));

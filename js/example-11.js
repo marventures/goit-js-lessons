@@ -18,7 +18,7 @@ const cars = [
 ];
 
 // write code below this line
-const getModelsOnSale = cars => {};
+const getModelsOnSale = cars => cars.filter(car => car.onSale).map(car => car.model);
 // write code above this line
 
 console.table(getModelsOnSale(cars));

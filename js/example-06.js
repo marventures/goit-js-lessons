@@ -20,8 +20,8 @@ const cars = [
 ];
 
 // write code below this line
-const getCarByModel = (cars, model) => {};
+const getCarByModel = (cars, model) => cars.find(car => car.model === model);
 // write code above this line
 
-console.log(getCarByModel(cars, 'F-150'));
-// console.log(getCarByModel(cars, 'CX-9'));
+// console.log(getCarByModel(cars, 'F-150'));
+console.log(getCarByModel(cars, 'CX-9'));

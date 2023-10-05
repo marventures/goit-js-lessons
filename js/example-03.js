@@ -18,8 +18,12 @@ const cars = [
 ];
 
 // write code below this line
-const filterByPrice = (cars, threshold) => {};
+const filterByPrice = (cars, threshold) => cars.filter(car => car.price < threshold);
+
+// const filterByPrice = (cars, threshold) =>
+//   cars.filter(car => car.price < 40000 && car.price <= threshold);
 // write code above this line
 
 console.table(filterByPrice(cars, 30000));
+// console.log(filterByPrice(cars, 50000));
 // console.table(filterByPrice(cars, 25000));

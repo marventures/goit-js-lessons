@@ -20,8 +20,17 @@ const cars = [
 
 const sortByModel = (cars, order) => {
   // write code below this line
+  const sortedCars = [...cars];
+
+  if (order === 'asc') {
+    sortedCars.sort((a, b) => a.model.localeCompare(b.model));
+  } else if (order === 'desc') {
+    sortedCars.sort((a, b) => b.model.localeCompare(a.model));
+  }
+
+  return sortedCars;
   // write code above this line
 };
 
-// console.table(sortByModel(cars, 'asc'));
-// console.table(sortByModel(cars, 'desc'));
+console.table(sortByModel(cars, 'asc'));
+console.table(sortByModel(cars, 'desc'));

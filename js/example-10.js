@@ -18,7 +18,7 @@ const cars = [
 ];
 
 // write code below this line
-const getTotalAmount = cars => {};
+const getTotalAmount = cars => cars.reduce((acc, car) => (acc += car.amount), 0);
 // write code above this line
 
 console.log(getTotalAmount(cars));
