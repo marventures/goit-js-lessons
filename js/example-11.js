@@ -1,7 +1,7 @@
 /* 
-Example 8 - Sort method
+Example 11 - Method chains
 
-Let the sortByDescendingPrice function return a new array of cars sorted in DESCENDING order by the value of the price property.
+Let the getAvailableCarNames function return an array of car models, but only those that are currently for sale.
 */
 
 const cars = [
@@ -18,7 +18,7 @@ const cars = [
 ];
 
 // write code below this line
-const sortByDescendingPrice = cars => {};
+const getModelsOnSale = cars => {};
 // write code above this line
 
-console.table(sortByDescendingPrice(cars));
+console.table(getModelsOnSale(cars));

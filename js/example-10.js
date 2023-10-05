@@ -1,7 +1,7 @@
 /* 
-Example 8 - Sort method
+Example 10 - Reduce method
 
-Let the sortByDescendingPrice function return a new array of cars sorted in DESCENDING order by the value of the price property.
+Let the getTotalAmount function return the total number of cars (the value of the amount properties). 
 */
 
 const cars = [
@@ -18,7 +18,7 @@ const cars = [
 ];
 
 // write code below this line
-const sortByDescendingPrice = cars => {};
+const getTotalAmount = cars => {};
 // write code above this line
 
-console.table(sortByDescendingPrice(cars));
+console.log(getTotalAmount(cars));

@@ -1,45 +1,27 @@
 /* 
-Example 6 - Inline Arrow Functions
+Example 6 - The find method
 
-Make the code refactoring using arrow functions.
+Let the getCarByModel function return an array of cars whose model coincide with the value of the model parameter.
 */
 
-function each(array, callback) {
-  const newArr = [];
-  for (const el of array) {
-    newArr.push(callback(el));
-  }
-  return newArr;
-}
+const cars = [
+  { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true },
+  { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true },
+  { make: 'Mazda', model: 'Mazda 6', type: 'sedan', amount: 8, price: 24195, onSale: false },
+  { make: 'Mazda', model: 'CX-9', type: 'suv', amount: 7, price: 31520, onSale: true },
+  { make: 'Toyota', model: '4Runner', type: 'suv', amount: 19, price: 34210, onSale: false },
+  { make: 'Toyota', model: 'Sequoia', type: 'suv', amount: 16, price: 45560, onSale: false },
+  { make: 'Toyota', model: 'Tacoma', type: 'truck', amount: 4, price: 24320, onSale: true },
+  { make: 'Ford', model: 'F-150', type: 'truck', amount: 11, price: 27110, onSale: true },
+  { make: 'Ford', model: 'Fusion', type: 'sedan', amount: 13, price: 22120, onSale: true },
+  { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false },
+  { make: 'Ford', model: 'F-150', type: 'truck', amount: 14, price: 37110, onSale: false },
+  { make: 'Mazda', model: 'CX-9', type: 'suv', amount: 2, price: 41520, onSale: false },
+];
 
-console.log(
-  each([64, 49, 36, 25, 16], value => {
-    return value * 2;
-  })
-);
+// write code below this line
+const getCarByModel = (cars, model) => {};
+// write code above this line
 
-// implicit return
-// console.log(each([64, 49, 36, 25, 16], value => value * 2));
-
-console.log(
-  each([64, 49, 36, 25, 16], value => {
-    return value - 10;
-  })
-);
-
-console.log(
-  each([64, 49, 36, 25, 16], value => {
-    return Math.sqrt(value);
-  })
-);
-
-console.log(
-  each([1.5, 2.1, 16.4, 9.7, 11.3], value => {
-    return Math.ceil(value);
-  })
-);
-console.log(
-  each([1.5, 2.1, 16.4, 9.7, 11.3], value => {
-    return Math.floor(value);
-  })
-);
+console.log(getCarByModel(cars, 'F-150'));
+// console.log(getCarByModel(cars, 'CX-9'));

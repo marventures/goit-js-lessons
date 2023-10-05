@@ -1,20 +1,30 @@
 # GoIT JavaScript Lessons Summary
 
-## Module 4 Lesson 7 (Callbacks | Arrow functions | forEach)
+## Module 4 Lesson 8 (Iterating Array Methods)
 
-- Callbacks
-- forEach Method
-- Arrow Functions
-- Code Types
+- Pure Functions
+- Array Iteration Methods
+- map Method
+- flatMap Method
+- filter() Method
+- find() Method
+- findIndex() Method
+- every() and some() Method
+- reduce() Method
+- sort() Method
+- Method Chaining
 
 ### JS Tasks:
 
-- Example 1 - Function callback
-- Example 2 - Function callback
-- Example 3 - Function callback
-- Example 4 - Arrow functions
-- Example 5 - Arrow functions
-- Example 6 - Inline Arrow Functions
-- Example 7 - forEach Method
-- Example 8 - forEach Method
-- Example 9 - forEach Method
+- Example 1 - Map method
+- Example 2 - Map method
+- Example 3 - Filter method
+- Example 4 - Filter method
+- Example 5 - Filter method
+- Example 6 - The find method
+- Example 7 - Sort method (Ascending)
+- Example 8 - Sort method (Descending)
+- Example 9 - Sort method (Alphabetical and Reverse Alphabetical)
+- Example 10 - Reduce method
+- Example 11 - Method chains
+- Example 12 - Method chains
