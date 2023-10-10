@@ -14,6 +14,9 @@ const chopShop = {
   ],
   calcTotalPrice(stoneName) {
     // write code below this line
+    const currentStone = this.stones.find(stone => stoneName === stone.name);
+
+    return currentStone.price * currentStone.quantity;
     // write code above this line
   },
 };

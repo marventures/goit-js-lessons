@@ -9,11 +9,11 @@ const phonebook = {
       list: 'default',
       ...contact,
       // write code below this line
-      id: generateId(),
-      createdAt: getDate(),
+      id: this.generateId(),
+      createdAt: this.getDate(),
     };
-    contacts.push(newContact);
-    return contacts;
+    this.contacts.push(newContact);
+    return this.contacts;
     // write code above this line
   },
   generateId() {
