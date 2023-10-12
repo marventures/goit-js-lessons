@@ -13,6 +13,25 @@ removeItem(item) - receives the product and, if it exists, removes it from the c
 
 class Storage {
   // write code below this line
+  constructor(arr) {
+    this.items = arr;
+  }
+
+  getItems() {
+    return this.items;
+  }
+
+  addItem(item) {
+    this.items.push(item);
+  }
+
+  removeItem(item) {
+    if (this.items.includes(item)) {
+      const idx = this.items.indexOf(item);
+
+      this.items.splice(idx, 1);
+    }
+  }
   // write code above this line
 }
 

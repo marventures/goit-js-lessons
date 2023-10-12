@@ -6,6 +6,13 @@ Write a Toggle class that takes a settings object {isOpen: boolean} and declares
 
 class Toggle {
   // write code below this line
+  constructor({ isOpen = false } = {}) {
+    this.on = isOpen;
+  }
+
+  toggle() {
+    this.on = !this.on;
+  }
   // write code above this line
 }
 
