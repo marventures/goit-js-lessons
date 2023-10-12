@@ -1,40 +1,30 @@
 /* 
-Example 3 -Calculator
+Example 3 - User
 
-Create a calculator object with three methods:
+Write a class User which creates an object with properties login and email. 
 
-read(a, b)- takes two values and stores them as object properties.
-add() - returns the sum of the stored values.
-mult() - multiplies the stored values and returns the result.
+Declare private properties #login and #email, which can be accessed via getter and setter of login and email.
 */
 
-const calculator = {
-  a: 0,
-  b: 0,
-
+class User {
   // write code below this line
-  read(a, b) {
-    this.a = a;
-    this.b = b;
-  },
-  add() {
-    return this.a + this.b;
-  },
-  mult() {
-    return this.a * this.b;
-  },
-  divide() {
-    return this.a / this.b;
-  },
-  subtract() {
-    return this.a - this.b;
-  },
   // write code above this line
-};
+}
 
-calculator.read(3, 5);
-console.log(calculator);
-console.log(calculator.add());
-console.log(calculator.mult());
-console.log(calculator.divide());
-console.log(calculator.subtract());
+const mango = new User({
+  login: 'Mango',
+  email: 'mango@dog.woof',
+});
+
+console.log(mango.login); // Mango
+mango.login = 'Mangodoge';
+console.log(mango.login); // Mangodoge
+
+// const poly = new User({
+//   login: 'Poly',
+//   email: 'poly@mail.com',
+// });
+
+// console.log(poly.login); // Poly
+// poly.login = 'Polycutie';
+// console.log(poly.login); // Polycutie

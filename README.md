@@ -1,13 +1,15 @@
 # GoIT JavaScript Lessons Summary
 
-## Module 5 Lesson 9 (The keyword this)
+## Module 5 Lesson 10 (Prototypes and Classes)
 
-- Function Execution Context
-- How to Determine this
-- Function Methods
+- Object-Oriented Programming
+- Prototypal Inheritance
+- Classes
 
 ### JS Tasks:
 
-- Example 1 - Jewelry workshop
-- Example 2 - Phone book
-- Example 3 - Calculator
+- Example 1 - Blogger
+- Example 2 - Storagе
+- Example 3 - User
+- Example 4 - Notes
+- Example 5 - Toggle
