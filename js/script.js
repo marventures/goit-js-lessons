@@ -27,12 +27,14 @@ Show how it is done with the help of **map** and **reduce**
 
 // const container = document.getElementById('container');
 // const technologies = ['HTML', 'CSS', 'JavaScript', 'React', 'Node'];
+// // create element
 // const list = document.createElement('ul');
 
 //* 2.A (for...of loop)
 // for (const technology of technologies) {
 //   const liEl = document.createElement('li');
-//   liEl.textContent = technology;
+//   //   if you want to have the text content for your element
+//   liEl.textContent = technology; //'<li>HTML</li>'
 //   list.append(liEl);
 // }
 // container.append(list); // append() -> adds one or more elements after all children of the container element.
@@ -83,9 +85,10 @@ Create several buttons based on an array of objects using createElement
 
 // colors.forEach(({ label, color }) => {
 //   const buttonEl = document.createElement('button');
-//   buttonEl.style.backgroundColor = color;
-//   buttonEl.classList.add('indents');
-//   buttonEl.style.margin = '5px';
-//   buttonEl.textContent = label;
+//   buttonEl.style.backgroundColor = color; // add background color
+//   buttonEl.classList.add('indents'); // add class name
+//   buttonEl.style.margin = '5px'; // add margin
+//   buttonEl.textContent = label; // add text content for the element(button)
+//   buttonEl.style.fontSize = '24px';
 //   container.append(buttonEl);
 // });
