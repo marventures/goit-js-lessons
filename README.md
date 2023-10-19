@@ -1,15 +1,17 @@
 # GoIT JavaScript Lessons Summary
 
-## Module 5 Lesson 10 (Prototypes and Classes)
+## Module 6 Lesson 11 (DOM)
 
-- Object-Oriented Programming
-- Prototypal Inheritance
-- Classes
+- Document Object Model
+- DOM Traversal
+- Query for Elements
+- Properties and Attributes
+- Creating and Removing Elements
+- innerHTML Property and insertAdjacentHTML()
+- Adding Scripts
 
-### JS Tasks:
+### JS Examples:
 
-- Example 1 - Blogger
-- Example 2 - Storagе
-- Example 3 - User
-- Example 4 - Notes
-- Example 5 - Toggle
+- Example 1 (Query Elements)
+- Example 2 (Creating Elements)
+- Example 3 (Adding styles and classes to elements)
