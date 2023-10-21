@@ -1,17 +1,15 @@
 # GoIT JavaScript Lessons Summary
 
-## Module 6 Lesson 11 (DOM)
+## Module 6 Lesson 12 (DOM)
 
-- Document Object Model
-- DOM Traversal
-- Query for Elements
-- Properties and Attributes
-- Creating and Removing Elements
-- innerHTML Property and insertAdjacentHTML()
-- Adding Scripts
+- Events
+- Event Object
+- Keyboard Events
+- Form Events
 
 ### JS Examples:
 
-- Example 1 (Query Elements)
-- Example 2 (Creating Elements)
-- Example 3 (Adding styles and classes to elements)
+- Example 1 ('Click' event & event.currentTarget)
+- Example 2 ('Submit' event on forms)
+- Example 3 ('This' on event listeners, 'Keydown' event & removeEventListener method)
+- Example 4 (Modal Window)
