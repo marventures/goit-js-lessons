@@ -15,6 +15,7 @@ function handleSubmit(event) {
   // const login = event.currentTarget.elements.login;
   // const password = event.currentTarget.elements.password;
 
+  // value property -> it's the user input
   if (login.value === '' || password.value === '') {
     return console.log('Please fill in all the fields!');
   }

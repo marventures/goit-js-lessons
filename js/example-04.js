@@ -10,17 +10,17 @@ overlay.addEventListener('click', handleModalClose);
 document.body.addEventListener('keydown', handleModalCloseOnESC);
 
 // Modal Open Handler
-// function handleModalOpen() {
-//   document.body.classList.add('open');
-// }
+function handleModalOpen() {
+  document.body.classList.add('open');
+}
 
 // Modal Close Handler
-// function handleModalClose() {
-//   document.body.classList.remove('open');
-// }
+function handleModalClose() {
+  document.body.classList.remove('open');
+}
 
 // Modal Close On Esc Handler
-// function handleModalCloseOnESC({ key }) {
-//   // let key = event.key
-//   if (key === 'Escape') handleModalClose();
-// }
+function handleModalCloseOnESC({ key }) {
+  // let key = event.key
+  if (key === 'Escape') handleModalClose();
+}

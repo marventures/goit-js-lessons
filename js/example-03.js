@@ -1,29 +1,29 @@
 /* Example 3 ('This' on event listeners, 'Keydown' event & removeEventListener method) */
 
-const mango = {
-  username: 'Mango',
-  showUsername() {
-    console.log(this);
-    console.log(`My username is: ${this.username}`);
-  },
-};
+// const mango = {
+//   username: 'Mango',
+//   showUsername() {
+//     console.log(this);
+//     console.log(`My username is: ${this.username}`);
+//   },
+// };
 
-// ✅ It's working // 'this' will refer to mango object
-mango.showUsername();
+// // ✅ It's working // 'this' will refer to mango object
+// mango.showUsername();
 
-const btn = document.querySelector('.js-btn');
+// const btn = document.querySelector('.js-btn');
 
-// ❌ 'this' will refer to the ELEMENT itself (button) if you use showUsername as the callback
-btn.addEventListener('click', mango.showUsername); // does not work
+// // ❌ 'this' will refer to the HTML ELEMENT itself (button) if you use showUsername as the callback
+// btn.addEventListener('click', mango.showUsername); // does not work
 
-// ✅ Don't forget to bind the context of the object's methods
+// // ✅ Don't forget to bind the context of the object's methods
 // btn.addEventListener('click', mango.showUsername.bind(mango));
 
 //!========================================================
 
-// document.addEventListener('keydown', event => {
-//   console.log('Keydown: ', event);
-// });
+document.addEventListener('keydown', event => {
+  console.log('Keydown: ', event);
+});
 
 //!========================================================
 

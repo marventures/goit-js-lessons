@@ -1,6 +1,7 @@
 /* Example 1 ('Click' event & event.currentTarget) */
 
 const showCT = document.getElementById('showCT');
+// const showCT = document.querySelector('#showCT');
 
 showCT.addEventListener('click', event => {
   console.log(event); //
