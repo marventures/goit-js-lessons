@@ -1,6 +1,6 @@
 # GoIT JavaScript Lessons Summary
 
-## Module 6 Lesson 12 (DOM)
+## Module 6 Lesson 12 (Events)
 
 - Events
 - Event Object
