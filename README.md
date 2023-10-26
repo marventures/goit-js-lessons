@@ -1,15 +1,13 @@
 # GoIT JavaScript Lessons Summary
 
-## Module 6 Lesson 12 (Events)
+## Module 7 Lesson 13 (Event Delegation)
 
-- Events
-- Event Object
-- Keyboard Events
-- Form Events
+- Event Propagation
+- Event Bubbling
+- Event Delagation
 
 ### JS Examples:
 
-- Example 1 ('Click' event & event.currentTarget)
-- Example 2 ('Submit' event on forms)
-- Example 3 ('This' on event listeners, 'Keydown' event & removeEventListener method)
-- Example 4 (Modal Window)
+- Example 1 (Event Propagation)
+- Example 2 (Capturing Phase (using true parameter) vs Bubbling Phase)
+- Example 3 (Event Delagation)

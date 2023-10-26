@@ -1,26 +1,7 @@
-/* Example 2 ('Submit' event on forms)*/
+/* Example 2 - Capturing Phase (using true parameter) vs Bubbling Phase */
 
-const form = document.querySelector('.form');
+for (let elem of document.querySelectorAll('*')) {
+  elem.addEventListener('click', e => alert(`Capturing (diving): ${elem.tagName}`), true); // When the third parameter is set to true, it indicates that the event should be handled during the capturing phase.
 
-form.addEventListener('submit', handleSubmit);
-
-function handleSubmit(event) {
-  // avoids refreshing the web page upon submitting the form
-  event.preventDefault();
-
-  // prettier-ignore
-  const { elements: { login, password }} = event.currentTarget;
-  console.dir(event.currentTarget);
-
-  // const login = event.currentTarget.elements.login;
-  // const password = event.currentTarget.elements.password;
-
-  // value property -> it's the user input
-  if (login.value === '' || password.value === '') {
-    return console.log('Please fill in all the fields!');
-  }
-  console.log(`Login: ${login.value}, Password: ${password.value}`);
-
-  // reset the form upon submission
-  event.currentTarget.reset();
+  elem.addEventListener('click', e => alert(`Bubbling (emersion): ${elem.tagName}`));
 }

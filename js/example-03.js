@@ -1,42 +1,45 @@
-/* Example 3 ('This' on event listeners, 'Keydown' event & removeEventListener method) */
+/* Example 3 Event Delagation */
 
-// const mango = {
-//   username: 'Mango',
-//   showUsername() {
-//     console.log(this);
-//     console.log(`My username is: ${this.username}`);
-//   },
-// };
+const item1 = document.getElementById('item1');
+const item2 = document.getElementById('item2');
+const item3 = document.getElementById('item3');
+const item4 = document.getElementById('item4');
+const item5 = document.getElementById('item5');
 
-// // ✅ It's working // 'this' will refer to mango object
-// mango.showUsername();
-
-// const btn = document.querySelector('.js-btn');
-
-// // ❌ 'this' will refer to the HTML ELEMENT itself (button) if you use showUsername as the callback
-// btn.addEventListener('click', mango.showUsername); // does not work
-
-// // ✅ Don't forget to bind the context of the object's methods
-// btn.addEventListener('click', mango.showUsername.bind(mango));
-
-//!========================================================
-
-document.addEventListener('keydown', event => {
-  console.log('Keydown: ', event);
+// ❌ we're individually adding event listeners to each <li> element. This approach becomes inefficient
+item1.addEventListener('click', () => {
+  item1.classList.toggle('highlight');
 });
 
-//!========================================================
+item2.addEventListener('click', () => {
+  item2.classList.toggle('highlight');
+});
 
-// const btn = document.querySelector('.js-btn');
+item3.addEventListener('click', () => {
+  item3.classList.toggle('highlight');
+});
 
-// btn.addEventListener('click', handleClick);
+item4.addEventListener('click', () => {
+  item4.classList.toggle('highlight');
+});
 
-// let counter = 0;
+item5.addEventListener('click', () => {
+  item5.classList.toggle('highlight');
+});
 
-// function handleClick(e) {
-//   counter++;
-//   console.log(counter);
-//   if (counter === 5) {
-//     btn.removeEventListener('click', handleClick);
+//!=================================================================
+
+// EVENT DELEGATION -> can use because of event bubbling
+
+// const parentList = document.getElementById('parent-list');
+
+// const handleClick = e => {
+//   if (e.target && e.target.nodeName === 'LI') {
+//     e.target.classList.toggle('highlight');
 //   }
-// }
+// };
+
+//✅ When a click event occurs on any of the list items, the event bubbles up to the <ul> element
+//✅ we AVOID adding individual event listeners to each <li> element, which can be inefficient
+
+// parentList.addEventListener('click', handleClick);
