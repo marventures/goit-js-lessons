@@ -1,14 +1,44 @@
-ul {
-  list-style-type: none;
+* {
+  margin: 0;
   padding: 0;
 }
-li {
-  padding: 10px;
-  margin: 5px;
-  border: 1px solid #ddd;
-  cursor: pointer;
+
+.input {
+  margin: 30px;
+  display: inline-block;
 }
 
-.highlight {
-  background-color: yellow;
+form {
+  width: 200px;
+  margin-left: 50px;
+  text-align: center;
+}
+
+fieldset {
+  border-radius: 10px;
+  border-color: orange;
+  background-color: rgba(0, 0, 0, 0.239);
+}
+
+form label {
+  display: block;
+  margin: 10px;
+}
+
+form label input {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px;
+  border-color: orange;
+  margin-top: 10px;
+}
+
+.wrong {
+  border-color: red;
+}
+
+.correct {
+  border-color: green;
 }

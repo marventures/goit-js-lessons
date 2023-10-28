@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Example 3</title>
+    <title>Example 4</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <label class="input">
-      Enter your name
-      <input type="text" placeholder="Name" id="nameInput" />
-    </label>
+    <form id="signInForm">
+      <fieldset>
+        <legend>Sign In</legend>
+        <label>
+          Enter your login
+          <input type="text" placeholder="Login" />
+        </label>
+        <label>
+          Enter your password
+          <input type="password" placeholder="Password" />
+        </label>
+      </fieldset>
+    </form>
 
     <!-- LODASH LIBRARY -->
     <script
@@ -20,6 +29,6 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <script src="./js/example-03.js"></script>
+    <script src="./js/example-04.js"></script>
   </body>
 </html>

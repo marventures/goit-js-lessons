@@ -1,13 +1,13 @@
 # GoIT JavaScript Lessons Summary
 
-## Module 7 Lesson 13 (Event Delegation)
+## Module 7 Lesson 14 (throttle/debounce and lazyload)
 
-- Event Propagation
-- Event Bubbling
-- Event Delagation
+- Throttle and Debounce
+- Lazy Loading
 
 ### JS Examples:
 
-- Example 1 (Event Propagation)
-- Example 2 (Capturing Phase (using true parameter) vs Bubbling Phase)
-- Example 3 (Event Delagation)
+- Example 1 - Throttle (Scroll Events)
+- Example 2 - Throttle (Resize Events)
+- Example 3 - Debounce (leading and trailing)
+- Example 4 - Debounce (Form Validation)

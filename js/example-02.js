@@ -1,7 +1,24 @@
-/* Example 2 - Capturing Phase (using true parameter) vs Bubbling Phase */
+/* Example 2 - Throttle (Resize Events) */
 
-for (let elem of document.querySelectorAll('*')) {
-  elem.addEventListener('click', e => alert(`Capturing (diving): ${elem.tagName}`), true); // When the third parameter is set to true, it indicates that the event should be handled during the capturing phase.
+const outputResizeDefault = document.getElementById('outputResizeDefault');
+const outputResizeThrottling = document.getElementById('outputResizeThrottling');
 
-  elem.addEventListener('click', e => alert(`Bubbling (emersion): ${elem.tagName}`));
-}
+const eventResizeCounter = {
+  default: 0,
+  throttled: 0,
+};
+
+// DEFAULT RESIZE
+window.addEventListener('resize', () => {
+  eventResizeCounter.default += 1;
+  outputResizeDefault.textContent = eventResizeCounter.default;
+});
+
+// THROTTLED RESIZE
+window.addEventListener(
+  'resize',
+  _.throttle(() => {
+    eventResizeCounter.throttled += 1;
+    outputResizeThrottling.textContent = eventResizeCounter.throttled;
+  }, 1500)
+);
