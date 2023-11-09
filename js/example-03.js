@@ -1,20 +1,14 @@
-/* Example 3 - Debounce (leading and trailing) */
+/* Example 3 - service for localStorage */
 
-const nameInput = document.getElementById('nameInput');
+import { save, load } from './storage.js';
 
-const handleInputDebounce = function (e) {
-  console.log(e.target.value);
+const formData = {
+  email: 'aaa@gmail.com',
+  message: 'hi',
 };
 
-nameInput.addEventListener(
-  'input',
-  _.debounce(handleInputDebounce, 1000, {
-    leading: true,
-    trailing: false,
-  })
+save('feedback-form-state', formData);
 
-  // third parameter in debounce {leading (default false) and trailing (default true)}
+const data = load('feedback-form-state').message;
 
-  // leading:true -> will be triggered at the BEGINNING of event stream
-  // trailing:true -> will be triggered at the END of event stream AFTER PAUSE
-);
+console.log(data);

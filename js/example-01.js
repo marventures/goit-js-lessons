@@ -1,26 +1,12 @@
-/* Example 1 - Throttle (Scroll Events) */
+/* Example 1 - JSON and Handling Errors in JSON*/
 
-const outputScrollDefault = document.getElementById('outputScrollDefault');
-const outputScrollThrottling = document.getElementById('outputScrollThrottling');
+console.log('before try catch');
 
-const eventScrollCounter = {
-  default: 0,
-  throttled: 0,
-};
+try {
+  const data = '{"name":"John", "age":30, "car":null}';
+  console.log(JSON.parse(data)); // JSON.parse() converts json to a js object
+} catch (err) {
+  console.error(err.message);
+}
 
-// Default Scroll
-document.addEventListener('scroll', () => {
-  eventScrollCounter.default += 1;
-  outputScrollDefault.textContent = eventScrollCounter.default;
-});
-
-// Scroll with Throttling
-document.addEventListener(
-  'scroll',
-  _.throttle(() => {
-    eventScrollCounter.throttled += 1;
-    outputScrollThrottling.textContent = eventScrollCounter.throttled;
-  }, 1500)
-  // underscore (_) in _.throttle means that this method came from lodash library
-  // second parameter of the throttle method is time in milliseconds
-);
+console.log('after try catch');

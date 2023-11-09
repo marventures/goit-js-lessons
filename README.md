@@ -1,13 +1,12 @@
 # GoIT JavaScript Lessons Summary
 
-## Module 7 Lesson 14 (throttle/debounce and lazyload)
+## Module 8 Lesson 16 (Web Storage)
 
-- Throttle and Debounce
-- Lazy Loading
+- JSON File Format
+- Web Storage
 
 ### JS Examples:
 
-- Example 1 - Throttle (Scroll Events)
-- Example 2 - Throttle (Resize Events)
-- Example 3 - Debounce (leading and trailing)
-- Example 4 - Debounce (Form Validation)
+- Example 1 - JSON and Handling Errors in JSON
+- Example 2 - Local Storage Basics
+- Example 3 - service for localStorage

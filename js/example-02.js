@@ -1,24 +1,41 @@
-/* Example 2 - Throttle (Resize Events) */
+/* Example 2 - Local Storage Basics */
 
-const outputResizeDefault = document.getElementById('outputResizeDefault');
-const outputResizeThrottling = document.getElementById('outputResizeThrottling');
+// 1. Saving to localStorage (setItem)
 
-const eventResizeCounter = {
-  default: 0,
-  throttled: 0,
+// A. (string value)
+localStorage.setItem('ui-theme', 'light');
+localStorage.setItem('sidebar', 'expanded');
+localStorage.setItem('notification-level', 'mute');
+
+// B. (object value -> need to stringify (Js Object -> json))
+const settings = {
+  theme: 'dark',
+  isAuthenticated: true,
+  options: [1, 2, 3],
 };
 
-// DEFAULT RESIZE
-window.addEventListener('resize', () => {
-  eventResizeCounter.default += 1;
-  outputResizeDefault.textContent = eventResizeCounter.default;
-});
+localStorage.setItem('settings', JSON.stringify(settings));
 
-// THROTTLED RESIZE
-window.addEventListener(
-  'resize',
-  _.throttle(() => {
-    eventResizeCounter.throttled += 1;
-    outputResizeThrottling.textContent = eventResizeCounter.throttled;
-  }, 1500)
-);
+// ------------------------------------
+
+// 2. Reading from a localStorage (getItem)
+
+// // A. (string value)
+// const theme = localStorage.getItem('ui-theme');
+// console.log(theme); // "light"
+
+// // B. (object value -> need to parse (JSON to JS Object))
+// const savedSettings = localStorage.getItem('settings');
+// const parsedSettings = JSON.parse(savedSettings);
+// console.log(parsedSettings); // settings object
+
+// -------------------------------------
+
+// 3. Removing from localStorage (removeItem)
+// localStorage.removeItem('ui-theme');
+
+// -------------------------------------
+
+//  4. Clearing from localStorage (clear)
+// // clear method removes all -> not safe
+// localStorage.clear();
