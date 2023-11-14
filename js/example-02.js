@@ -8,6 +8,7 @@ const onClick = () => {
     console.log('I love async JS!');
   }, 2000);
 
+  console.log(timerID);
   // clearTimeout cancels the timeout
   // clearTimeout(timerID);
 };

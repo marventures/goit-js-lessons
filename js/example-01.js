@@ -16,5 +16,15 @@ setTimeout(() => {
   console.log('B');
 }, 2000);
 
+setTimeout(() => {
+  // Will run last, after 2000 milliseconds
+  console.log('C');
+}, 1500);
+
+setTimeout(() => {
+  // Will run last, after 2000 milliseconds
+  console.log('E');
+}, 0);
+
 // Will run second
 console.log('D');
