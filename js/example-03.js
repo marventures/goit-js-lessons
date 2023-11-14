@@ -1,14 +1,19 @@
-/* Example 3 - service for localStorage */
+/* Example 3 - setInterval and clearInterval()*/
 
-import { save, load } from './storage.js';
+// ----------------------------------------------------------
 
-const formData = {
-  email: 'aaa@gmail.com',
-  message: 'hi',
-};
+const startBtn = document.querySelector('.js-start');
+const stopBtn = document.querySelector('.js-stop');
 
-save('feedback-form-state', formData);
+let timerId = null;
 
-const data = load('feedback-form-state').message;
+startBtn.addEventListener('click', () => {
+  timerId = setInterval(() => {
+    console.log(`I love async JS!  ${Math.random()}`);
+  }, 1000);
+});
 
-console.log(data);
+stopBtn.addEventListener('click', () => {
+  clearInterval(timerId);
+  console.log(`Interval with id ${timerId} has stopped!`);
+});

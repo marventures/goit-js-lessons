@@ -1,14 +1,20 @@
-/* Example 1 - JSON and Handling Errors in JSON*/
+/* Example 1 - Synchronous code vs Asynchronous code */
 
-console.log('before try catch');
+// Synchronous
+// console.log('First log');
+// console.log('Second log');
+// console.log('Third log');
 
-try {
-  const data = '{"name":"John", "age":30, "car":null}';
-  console.log(JSON.parse(data)); // JSON.parse() converts json to a js object
-} catch (err) {
-  // Error Handling
-  console.error(err.message);
-  console.error('This is not a valid JSON');
-}
+// ---------------------------------------------------------------
 
-console.log('after try catch');
+// Asynchronous (setTimeout)
+// Will run first
+console.log('A');
+
+setTimeout(() => {
+  // Will run last, after 2000 milliseconds
+  console.log('B');
+}, 2000);
+
+// Will run second
+console.log('D');
