@@ -10,5 +10,5 @@
 
 - Example 1 - Synchronous code vs Asynchronous code
 - Example 2 - setTimeout() and clearTimeout()
-- Example 3 - setInterval and clearInterval()
+- Example 3 - setInterval() and clearInterval()
 - Example 4 - Date and Time
