@@ -1,16 +1,39 @@
-/* Example 2 - setTimeout() and clearTimeout */
+/* Example 2 - Event Loop in Practice */
 
-const button = document.querySelector('button');
+// 1. Scenario 1
 
-// setTimeout(callback, delay, arg1, arg2, ...)
-const onClick = () => {
-  const timerID = setTimeout(() => {
-    console.log('I love async JS!');
-  }, 2000);
+console.log('A');
 
-  console.log(timerID);
-  // clearTimeout cancels the timeout
-  // clearTimeout(timerID);
-};
+// setTimeout
+setTimeout(() => {
+  console.log('B');
+}, 0);
 
-button.addEventListener('click', onClick);
+const promise = new Promise((resolve, reject) => {
+  resolve('C');
+});
+
+// Consuming the Promise
+promise.then(value => {
+  console.log(value);
+});
+
+console.log('D');
+
+// A > D > C > B
+// 1. console.log
+// 2. Promise
+// 3. setTimeout(Async)
+
+////////////////////////////////////////////////////////////////
+
+// 2. Scenario 2:
+
+// console.log('A');
+
+// Promise.resolve('B')
+//   .then(value => console.log(value))
+//   .catch(() => console.log('C'))
+//   .finally(() => console.log('D'));
+
+// console.log('E');

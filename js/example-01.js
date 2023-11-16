@@ -1,30 +1,34 @@
-/* Example 1 - Synchronous code vs Asynchronous code */
+/* Example 1- Creating and Cosuming a Promise */
 
-// Synchronous
-// console.log('First log');
-// console.log('Second log');
-// console.log('Third log');
+// Promise -> is an object representing the current state of an asynchronous operation
 
-// ---------------------------------------------------------------
+// Promise has Three States:
+// 1. Pending
+// 2. Fulfilled
+// 3. Rejected
 
-// Asynchronous (setTimeout)
-// Will run first
-console.log('A');
+// Promise is Settled -> either fulfilled/ rejected
 
-setTimeout(() => {
-  // Will run last, after 2000 milliseconds
-  console.log('B');
-}, 2000);
+// ----------------------------------------------------------
 
-setTimeout(() => {
-  // Will run last, after 2000 milliseconds
-  console.log('C');
-}, 1500);
+// Change value of isSuccess variable to call resolve or reject
+const isSuccess = true;
 
-setTimeout(() => {
-  // Will run last, after 2000 milliseconds
-  console.log('E');
-}, 0);
+// Creating a Promise
+// Promise class - has function(executor) - (resolve, reject)
+const promise = new Promise((resolve, reject) => {
+  // async operation
+  setTimeout(() => {
+    if (isSuccess) {
+      resolve('Success! Value passed to resolve function');
+    } else {
+      reject('Error! Error passed to reject function');
+    }
+  }, 2000);
+});
 
-// Will run second
-console.log('D');
+// Consuming a Promise (.then, .catch, .finally)
+promise
+  .then(value => console.log(value)) // promise is fulfilled/success
+  .catch(error => console.log(error)) // promise is rejected/error
+  .finally(() => console.log('Promise settled')); // promise is settled (fullfilled/rejected)

@@ -1,6 +1,6 @@
 # GoIT JavaScript Lessons Summary
 
-## Module 9 Lesson 17 (Timers and Time)
+## Module 9 Lesson 18 (Promises)
 
 - Asynchrony
 - Timers
@@ -8,7 +8,6 @@
 
 ### JS Examples:
 
-- Example 1 - Synchronous code vs Asynchronous code
-- Example 2 - setTimeout() and clearTimeout()
-- Example 3 - setInterval() and clearInterval()
-- Example 4 - Date and Time
+- Example 1- Creating and Cosuming a Promise
+- Example 2 - Event Loop in Practice
+- Example 3 - Promise.race(), Promise.all()

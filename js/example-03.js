@@ -1,19 +1,38 @@
-/* Example 3 - setInterval and clearInterval()*/
+/* Example 3 - Promise.race(), Promise.all() */
 
-// ----------------------------------------------------------
+const sleep = ms =>
+  new Promise((resolve, reject) => {
+    if (ms > 5000) {
+      reject(`Error: Sleep time (${ms} ms) is too long.`);
+    } else {
+      setTimeout(() => resolve(ms), ms);
+    }
+  });
 
-const startBtn = document.querySelector('.js-start');
-const stopBtn = document.querySelector('.js-stop');
+// ----------------------------------------------
 
-let timerId = null;
+// Promise.race() -> returns FIRST/FASTEST fulfilled promise
+Promise.race([sleep(2000), sleep(5000), sleep(500), sleep(500)])
+  .then(value => {
+    console.log(value);
+  })
+  .catch(error => {
+    console.error('Error in Promise.race:', error);
+  });
 
-startBtn.addEventListener('click', () => {
-  timerId = setInterval(() => {
-    console.log(`I love async JS!  ${Math.random()}`);
-  }, 1000);
-});
+// ----------------------------------------------
 
-stopBtn.addEventListener('click', () => {
-  clearInterval(timerId);
-  console.log(`Interval with id ${timerId} has stopped!`);
-});
+// Promise.all -> returns ALL fulfilled promise
+
+// Promise.all([sleep(2000), sleep(5000), sleep(3500)])
+//   .then(value => {
+//     console.log(value);
+//   })
+//   .catch(error => {
+//     console.error('Error in Promise.all:', error);
+//   });
+
+// ----------------------------------------------
+
+// // NOTE: For both Promise.race and Promise.all()
+// When at least one promise from the array is rejected -> will go to rejected state -> will throw an error
