@@ -1,4 +1,4 @@
-/* Example 1- Creating and Cosuming a Promise */
+/* Example 1- Creating and Consuming a Promise */
 
 // Promise -> is an object representing the current state of an asynchronous operation
 
@@ -32,3 +32,5 @@ promise
   .then(value => console.log(value)) // promise is fulfilled/success
   .catch(error => console.log(error)) // promise is rejected/error
   .finally(() => console.log('Promise settled')); // promise is settled (fullfilled/rejected)
+
+// then() -> also returns a promise

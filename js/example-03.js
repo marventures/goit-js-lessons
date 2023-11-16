@@ -11,26 +11,25 @@ const sleep = ms =>
 
 // ----------------------------------------------
 
-// Promise.race() -> returns FIRST/FASTEST fulfilled promise
-Promise.race([sleep(2000), sleep(5000), sleep(500), sleep(500)])
-  .then(value => {
-    console.log(value);
-  })
-  .catch(error => {
-    console.error('Error in Promise.race:', error);
-  });
-
-// ----------------------------------------------
-
-// Promise.all -> returns ALL fulfilled promise
-
-// Promise.all([sleep(2000), sleep(5000), sleep(3500)])
+// // Promise.race() -> returns FIRST/FASTEST fulfilled promise
+// Promise.race([sleep(2000), sleep(5000), sleep(500), sleep(200), sleep(6000), sleep(10000)])
 //   .then(value => {
 //     console.log(value);
 //   })
 //   .catch(error => {
-//     console.error('Error in Promise.all:', error);
+//     console.error('Error in Promise.race:', error);
 //   });
+
+// ----------------------------------------------
+
+// Promise.all -> returns ALL fulfilled promise
+Promise.all([sleep(2000), sleep(5000), sleep(3500)])
+  .then(value => {
+    console.log(value);
+  })
+  .catch(error => {
+    console.error('Error in Promise.all:', error);
+  });
 
 // ----------------------------------------------
 

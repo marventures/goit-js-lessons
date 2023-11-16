@@ -21,13 +21,14 @@ promise.then(value => {
 console.log('D');
 
 // A > D > C > B
+
 // 1. console.log
 // 2. Promise
 // 3. setTimeout(Async)
 
 ////////////////////////////////////////////////////////////////
 
-// 2. Scenario 2:
+// 2. Scenario 2: Promise Object
 
 // console.log('A');
 
@@ -37,3 +38,17 @@ console.log('D');
 //   .finally(() => console.log('D'));
 
 // console.log('E');
+
+// // 1. console.logs
+// // 2. resolve -> check 'then' value  || reject -> check 'catch'
+// // 3. finally()
+
+////////////////////////////////////////////////////////////////
+
+// const promise1 = new Promise((resolve, reject) => {
+//   reject('Whoops');
+// });
+
+// promise1.then(value => console.log(value));
+
+// will throw an error -> should use catch
