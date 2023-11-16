@@ -2,9 +2,9 @@
 
 ## Module 9 Lesson 18 (Promises)
 
-- Asynchrony
-- Timers
-- Date and Time
+- Promises
+- Promise Class Methods
+- Event Loop
 
 ### JS Examples:
 
