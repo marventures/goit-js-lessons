@@ -8,6 +8,6 @@
 
 ### JS Examples:
 
-- Example 1- Creating and Cosuming a Promise
+- Example 1- Creating and Consuming a Promise
 - Example 2 - Event Loop in Practice
 - Example 3 - Promise.race(), Promise.all()
