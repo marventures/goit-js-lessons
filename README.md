@@ -1,13 +1,12 @@
 # GoIT JavaScript Lessons Summary
 
-## Module 9 Lesson 18 (Promises)
+## Module 10 Lesson 19 (HTTP Requests)
 
-- Promises
-- Promise Class Methods
-- Event Loop
+- HTTP Protocol
+- Rest API
+- Ajax
+- CORS
 
 ### JS Examples:
 
-- Example 1- Creating and Consuming a Promise
-- Example 2 - Event Loop in Practice
-- Example 3 - Promise.race(), Promise.all()
+- Example 1- NewsAPI
