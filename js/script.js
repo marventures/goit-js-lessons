@@ -34,7 +34,6 @@ function createMarkup({ author, title, description, url, urlToImage }) {
             <p class="article-description">${description}</p>
             <a href=${url} class="article-link" target="_blank">Read more</a>
         </div>
-        
         `;
 }
 
