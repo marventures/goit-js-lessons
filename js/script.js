@@ -14,7 +14,7 @@ function handleSubmit(e) {
       const { articles } = data;
 
       if (articles.length === 0) throw new Error();
-      return articles.reduce((markup, article) => createMarkup(article) + markup, '');
+      return articles.reduce((acc, article) => createMarkup(article) + acc, '');
     })
     .then(updateNewsList)
     .catch(onError)
