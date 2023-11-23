@@ -42,6 +42,7 @@ function fetchNews() {
     .getNews()
     .then(data => {
       console.log(data);
+
       const { articles } = data;
 
       if (articles.length === 0) throw new Error();
