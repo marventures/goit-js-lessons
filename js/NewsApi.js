@@ -1,5 +1,5 @@
 const BASE_URL = 'https://newsapi.org/v2/everything';
-// NOTE: Please user your own API KEY below
+// NOTE: Please use your own API KEY below
 const API_KEY = '';
 
 export class NewsApi {
