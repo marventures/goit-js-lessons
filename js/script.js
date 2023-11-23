@@ -1,28 +1,62 @@
-import { getNews } from './news-api.js';
+import { NewsApi } from './NewsApi.js';
+import { LoadMoreBtn } from './components/LoadMoreBtn.js';
+
+///////////////////////////////////////////////////////////////////////
 
 const formEl = document.getElementById('form');
+const articlesWrapperEl = document.getElementById('articlesWrapper');
+
+///////////////////////////////////////////////////////////////////////
+
+// instantiate loadMoreBtn class
+const loadMoreBtn = new LoadMoreBtn({
+  selector: '#loadMoreBtn',
+  isHidden: true,
+});
+
+// instantiate newsAPI class
+const newsApi = new NewsApi();
+
+///////////////////////////////////////////////////////////////////////
 
 function handleSubmit(e) {
   e.preventDefault();
 
   const form = e.target;
-  const inputValue = form.elements.news.value;
+  newsApi.searchQuery = form.elements.news.value.trim();
+  clearNewsList();
+  newsApi.resetPage();
+  loadMoreBtn.show();
 
-  getNews(inputValue)
+  fetchNews().finally(() => form.reset());
+}
+
+formEl.addEventListener('submit', handleSubmit);
+
+///////////////////////////////////////////////////////////////////////
+
+function fetchNews() {
+  loadMoreBtn.disable();
+
+  return newsApi
+    .getNews()
     .then(data => {
       console.log(data);
       const { articles } = data;
 
       if (articles.length === 0) throw new Error();
+
       return articles.reduce((acc, article) => createMarkup(article) + acc, '');
     })
-    .then(updateNewsList)
-    .catch(onError)
-    .finally(() => form.reset());
+    .then(markup => {
+      updateNewsList(markup);
+      loadMoreBtn.enable();
+    })
+    .catch(onError);
 }
 
-formEl.addEventListener('submit', handleSubmit);
-
+// we dynamically get the selector using 'button' property on LoadMoreBtn Class
+loadMoreBtn.button.addEventListener('click', fetchNews);
 ///////////////////////////////////////////////////////////////////////
 
 function createMarkup({ author, title, description, url, urlToImage }) {
@@ -39,8 +73,14 @@ function createMarkup({ author, title, description, url, urlToImage }) {
 
 ///////////////////////////////////////////////////////////////////////
 
+function clearNewsList() {
+  articlesWrapperEl.innerHTML = '';
+}
+
+///////////////////////////////////////////////////////////////////////
+
 function updateNewsList(markup) {
-  document.getElementById('articlesWrapper').innerHTML = markup;
+  articlesWrapperEl.insertAdjacentHTML('beforeend', markup);
 }
 
 ///////////////////////////////////////////////////////////////////////

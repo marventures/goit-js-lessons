@@ -1,12 +1,9 @@
 # GoIT JavaScript Lessons Summary
 
-## Module 10 Lesson 19 (HTTP Requests)
+## Module 10 Lesson 20 (Pagination)
 
-- HTTP Protocol
-- Rest API
-- Ajax
-- CORS
+- Pagination
 
 ### JS Examples:
 
-- Example 1- NewsAPI
+- Example 1 - Pagination using Load More button
