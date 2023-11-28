@@ -1,4 +1,5 @@
 // Reference: https://mockapi.io/
+// use your own url
 const BASE_URL = '';
 
 ////////////////////////////////////////////////////
@@ -11,6 +12,7 @@ export const saveTask = task => {
     headers: {
       'Content-Type': 'application/json',
     },
+    // JS object -> json string
     body: JSON.stringify(task),
   };
   return fetch(BASE_URL, options);
@@ -51,10 +53,10 @@ export const updateTask = (id, status) => {
 export const deleteTask = id => {
   console.log(`DELETE id: ${id}`);
 
-  const options = {
-    method: 'DELETE',
-  };
-  return fetch(`${BASE_URL}/${id}`, options);
+  // const options = {
+  //   method: 'DELETE',
+  // };
+  // return fetch(`${BASE_URL}/${id}`, options);
 
-  // return axios.delete(`${BASE_URL}/${id}`);
+  return axios.delete(`${BASE_URL}/${id}`);
 };
