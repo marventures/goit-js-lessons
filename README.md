@@ -1,9 +1,9 @@
 # GoIT JavaScript Lessons Summary
 
-## Module 10 Lesson 20 (Pagination)
+## Module 11 Lesson 21 (CRUD)
 
-- Pagination
+- CRUD
 
 ### JS Examples:
 
-- Example 1 - Pagination using Load More button
+- Example 1 - CRUD (mockAPI)

@@ -1,91 +1,88 @@
-import { NewsApi } from './NewsApi.js';
-import { LoadMoreBtn } from './components/LoadMoreBtn.js';
+import { saveTask, loadTasks, updateTask, deleteTask } from './mock-api.js';
 
-///////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////
 
-const formEl = document.getElementById('form');
-const articlesWrapperEl = document.getElementById('articlesWrapper');
+const addBtnEl = document.getElementById('addBtn');
+const myUL = document.getElementById('myUL');
+const myInput = document.getElementById('myInput');
 
-///////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////
 
-// instantiate loadMoreBtn class
-const loadMoreBtn = new LoadMoreBtn({
-  selector: '#loadMoreBtn',
-  isHidden: true,
-});
+let currentId = 1;
 
-// instantiate newsAPI class
-const newsApi = new NewsApi();
-
-///////////////////////////////////////////////////////////////////////
-
-function handleSubmit(e) {
-  e.preventDefault();
-
-  const form = e.target;
-  newsApi.searchQuery = form.elements.news.value.trim();
-  clearNewsList();
-  newsApi.resetPage();
-  loadMoreBtn.show();
-
-  fetchNews().finally(() => form.reset());
+function addCloseButton(li) {
+  const span = document.createElement('SPAN');
+  const txt = document.createTextNode('\u00D7');
+  span.className = 'close';
+  span.appendChild(txt);
+  li.appendChild(span);
 }
 
-formEl.addEventListener('submit', handleSubmit);
+function createLi(text, isDone = false, id = currentId) {
+  const liEl = document.createElement('LI');
+  const liText = document.createTextNode(text);
+  liEl.appendChild(liText);
+  liEl.dataset.id = id;
+  if (isDone) liEl.className = 'checked';
+  myUL.appendChild(liEl);
+  addCloseButton(liEl);
+}
 
-///////////////////////////////////////////////////////////////////////
+function addNewTask() {
+  const inputValue = myInput.value.trim();
+  if (inputValue === '') {
+    alert('You must write something!');
+    return;
+  }
+  createLi(inputValue);
+  myInput.value = '';
+  addTaskToDB(inputValue);
+}
 
-function fetchNews() {
-  loadMoreBtn.disable();
+addBtnEl.addEventListener('click', addNewTask);
 
-  return newsApi
-    .getNews()
-    .then(data => {
-      console.log(data);
+/////////////////////////////////////////////////////
 
-      const { articles } = data;
+function handleTaskBehavior({ target }) {
+  if (target.tagName === 'LI') {
+    target.classList.toggle('checked');
 
-      if (articles.length === 0) throw new Error();
+    // UPDATE
+    updateTask(target.dataset.id, target.classList.contains('checked'));
+  } else if (target.classList.contains('close')) {
+    target.parentNode.remove();
 
-      return articles.reduce((acc, article) => createMarkup(article) + acc, '');
+    // DELETE
+    deleteTask(target.parentNode.dataset.id);
+  }
+}
+
+myUL.addEventListener('click', handleTaskBehavior);
+
+/////////////////////////////////////////////////////
+
+const createTaskObject = (text, isDone) => ({ text, isDone });
+
+function addTaskToDB(text, isDone = false) {
+  const newTask = createTaskObject(text, isDone);
+  // CREATE
+  saveTask(newTask);
+  currentId += 1;
+}
+
+/////////////////////////////////////////////////////
+
+function fillTasksList() {
+  // READ
+  loadTasks()
+    .then(todos => {
+      todos.forEach(({ text, isDone, id }) => createLi(text, isDone, id));
+      console.log(todos);
+      return todos;
     })
-    .then(markup => {
-      updateNewsList(markup);
-      loadMoreBtn.enable();
-    })
-    .catch(onError);
+    .then(todos => {
+      currentId = todos.length === 0 ? 1 : Number(todos[todos.length - 1].id) + 1;
+    });
 }
 
-// we dynamically get the selector using 'button' property on LoadMoreBtn Class
-loadMoreBtn.button.addEventListener('click', fetchNews);
-///////////////////////////////////////////////////////////////////////
-
-function createMarkup({ author, title, description, url, urlToImage }) {
-  return `
-        <div class="article-card">
-            <h2 class="article-title">${title}</h2>
-            <h3 class="article-author">${author || 'Anonym'}</h3>
-            <img src=${urlToImage} class="article-img">
-            <p class="article-description">${description}</p>
-            <a href=${url} class="article-link" target="_blank">Read more</a>
-        </div>
-        `;
-}
-
-///////////////////////////////////////////////////////////////////////
-
-function clearNewsList() {
-  articlesWrapperEl.innerHTML = '';
-}
-
-///////////////////////////////////////////////////////////////////////
-
-function updateNewsList(markup) {
-  articlesWrapperEl.insertAdjacentHTML('beforeend', markup);
-}
-
-///////////////////////////////////////////////////////////////////////
-
-function onError() {
-  updateNewsList('<p>Articles not found</p>');
-}
+window.addEventListener('DOMContentLoaded', fillTasksList);
