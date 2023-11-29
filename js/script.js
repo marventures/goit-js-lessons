@@ -1,88 +1,62 @@
-import { saveTask, loadTasks, updateTask, deleteTask } from './mock-api.js';
+import { getNews } from './news-api.js';
 
-////////////////////////////////////////////////////
+const formEl = document.getElementById('form');
 
-const addBtnEl = document.getElementById('addBtn');
-const myUL = document.getElementById('myUL');
-const myInput = document.getElementById('myInput');
+async function handleSubmit(e) {
+  e.preventDefault();
 
-////////////////////////////////////////////////////
+  const form = e.target;
+  const inputValue = form.elements.news.value;
 
-let currentId = 1;
+  // Async Await Syntax
+  // try {
+  //   const { articles } = await getNews(inputValue);
 
-function addCloseButton(li) {
-  const span = document.createElement('SPAN');
-  const txt = document.createTextNode('\u00D7');
-  span.className = 'close';
-  span.appendChild(txt);
-  li.appendChild(span);
-}
+  //   if (articles.length === 0) throw new Error();
+  //   const markup = articles.reduce((acc, article) => createMarkup(article) + acc, '');
+  //   updateNewsList(markup);
+  // } catch {
+  //   onError();
+  // } finally {
+  //   form.reset();
+  // }
 
-function createLi(text, isDone = false, id = currentId) {
-  const liEl = document.createElement('LI');
-  const liText = document.createTextNode(text);
-  liEl.appendChild(liText);
-  liEl.dataset.id = id;
-  if (isDone) liEl.className = 'checked';
-  myUL.appendChild(liEl);
-  addCloseButton(liEl);
-}
+  getNews(inputValue)
+    .then(data => {
+      const { articles } = data;
 
-function addNewTask() {
-  const inputValue = myInput.value.trim();
-  if (inputValue === '') {
-    alert('You must write something!');
-    return;
-  }
-  createLi(inputValue);
-  myInput.value = '';
-  addTaskToDB(inputValue);
-}
-
-addBtnEl.addEventListener('click', addNewTask);
-
-/////////////////////////////////////////////////////
-
-function handleTaskBehavior({ target }) {
-  if (target.tagName === 'LI') {
-    target.classList.toggle('checked');
-
-    // UPDATE
-    updateTask(target.dataset.id, target.classList.contains('checked'));
-  } else if (target.classList.contains('close')) {
-    target.parentNode.remove();
-
-    // DELETE
-    deleteTask(target.parentNode.dataset.id);
-  }
-}
-
-myUL.addEventListener('click', handleTaskBehavior);
-
-/////////////////////////////////////////////////////
-
-const createTaskObject = (text, isDone) => ({ text, isDone });
-
-function addTaskToDB(text, isDone = false) {
-  const newTask = createTaskObject(text, isDone);
-  // CREATE
-  saveTask(newTask);
-  currentId += 1;
-}
-
-/////////////////////////////////////////////////////
-
-function fillTasksList() {
-  // READ
-  loadTasks()
-    .then(todos => {
-      todos.forEach(({ text, isDone, id }) => createLi(text, isDone, id));
-      console.log(todos);
-      return todos;
+      if (articles.length === 0) throw new Error();
+      return articles.reduce((acc, article) => createMarkup(article) + acc, '');
     })
-    .then(todos => {
-      currentId = todos.length === 0 ? 1 : Number(todos[todos.length - 1].id) + 1;
-    });
+    .then(updateNewsList)
+    .catch(onError)
+    .finally(() => form.reset());
 }
 
-window.addEventListener('DOMContentLoaded', fillTasksList);
+formEl.addEventListener('submit', handleSubmit);
+
+///////////////////////////////////////////////////////////////////////
+
+function createMarkup({ author, title, description, url, urlToImage }) {
+  return `
+        <div class="article-card">
+            <h2 class="article-title">${title}</h2>
+            <h3 class="article-author">${author || 'Anonym'}</h3>
+            <img src=${urlToImage} class="article-img">
+            <p class="article-description">${description}</p>
+            <a href=${url} class="article-link" target="_blank">Read more</a>
+        </div>
+        `;
+}
+
+///////////////////////////////////////////////////////////////////////
+
+function updateNewsList(markup) {
+  document.getElementById('articlesWrapper').innerHTML = markup;
+}
+
+///////////////////////////////////////////////////////////////////////
+
+function onError() {
+  updateNewsList('<p>Articles not found</p>');
+}
