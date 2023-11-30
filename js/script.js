@@ -2,36 +2,35 @@ import { getNews } from './news-api.js';
 
 const formEl = document.getElementById('form');
 
-// async function handleSubmit(e) {
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
 
   const form = e.target;
   const inputValue = form.elements.news.value;
 
   // Async Await Syntax
-  // try {
-  //   const { articles } = await getNews(inputValue);
+  try {
+    const { articles } = await getNews(inputValue);
 
-  //   if (articles.length === 0) throw new Error();
-  //   const markup = articles.reduce((acc, article) => createMarkup(article) + acc, '');
-  //   updateNewsList(markup);
-  // } catch {
-  //   onError();
-  // } finally {
-  //   form.reset();
-  // }
+    if (articles.length === 0) throw new Error();
+    const markup = articles.reduce((acc, article) => createMarkup(article) + acc, '');
+    updateNewsList(markup);
+  } catch {
+    onError();
+  } finally {
+    form.reset();
+  }
 
-  getNews(inputValue)
-    .then(data => {
-      const { articles } = data;
+  // getNews(inputValue)
+  //   .then(data => {
+  //     const { articles } = data;
 
-      if (articles.length === 0) throw new Error();
-      return articles.reduce((acc, article) => createMarkup(article) + acc, '');
-    })
-    .then(updateNewsList)
-    .catch(onError)
-    .finally(() => form.reset());
+  //     if (articles.length === 0) throw new Error();
+  //     return articles.reduce((acc, article) => createMarkup(article) + acc, '');
+  //   })
+  //   .then(updateNewsList)
+  //   .catch(onError)
+  //   .finally(() => form.reset());
 }
 
 formEl.addEventListener('submit', handleSubmit);
