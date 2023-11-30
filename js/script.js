@@ -2,7 +2,8 @@ import { getNews } from './news-api.js';
 
 const formEl = document.getElementById('form');
 
-async function handleSubmit(e) {
+// async function handleSubmit(e) {
+function handleSubmit(e) {
   e.preventDefault();
 
   const form = e.target;
